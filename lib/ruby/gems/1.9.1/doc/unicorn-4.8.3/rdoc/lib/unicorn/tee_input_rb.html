@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: tee_input.rb [unicorn-4.8.3 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2014-08-22 21:04:19 +0800</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+      <dt class="scs-url">Trac URL</dt>
+      <dd class="scs-url"><a target="_top"
+        href="http://bogomips.org/unicorn.git/tree/lib/unicorn/tee_input.rb">http://bogomips.org/unicorn.git/tree/lib/unicorn/tee_input.rb</a></dd>
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>acts like tee(1) on an input input to provide a input-like stream while
+providing rewindable semantics through a File/StringIO backing store.  On
+the first pass, the input is only read on demand so your Rack application
+can use input notification (upload progress and like).  This should fully
+conform to the Rack::Lint::InputWrapper specification on the public API. 
+This class is intended to be a strict interpretation of
+Rack::Lint::InputWrapper functionality and will not support any deviations
+from it.</p>
+
+<p>When processing uploads, <a href="../../Unicorn.html">Unicorn</a> exposes a
+TeeInput object under “rack.input” of the Rack environment.</p>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

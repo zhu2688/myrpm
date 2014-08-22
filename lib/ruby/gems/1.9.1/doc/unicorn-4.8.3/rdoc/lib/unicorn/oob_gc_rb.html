@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: oob_gc.rb [unicorn-4.8.3 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2014-08-22 21:04:19 +0800</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+      <dt class="scs-url">Trac URL</dt>
+      <dd class="scs-url"><a target="_top"
+        href="http://bogomips.org/unicorn.git/tree/lib/unicorn/oob_gc.rb">http://bogomips.org/unicorn.git/tree/lib/unicorn/oob_gc.rb</a></dd>
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>Strongly consider <a
+href="https://github.com/tmm1/gctools">github.com/tmm1/gctools</a> if using
+Ruby 2.1+ It is built on new APIs in Ruby 2.1, so it is more intelligent
+than this historical implementation.</p>
+
+<p>Users on Ruby 2.0 (not 2.1+) may also want to check out
+lib/middleware/unicorn_oobgc.rb from the Discourse project (<a
+href="https://github.com/discourse/discourse">github.com/discourse/discourse</a>)</p>
+
+<p>The following information is only for historical versions of Ruby.</p>
+
+<p>Runs GC after requests, after closing the client socket and before
+attempting to accept more connections.</p>
+
+<p>This shouldn’t hurt overall performance as long as the server cluster is at
+&lt;50% CPU capacity, and improves the performance of most memory intensive
+requests.  This serves to improve <em>client-visible</em> performance
+(possibly at the cost of overall performance).</p>
+
+<p>Increasing the number of <tt>worker_processes</tt> may be necessary to
+improve average client response times because some of your workers will be
+busy doing GC and unable to service clients.  Think of using more workers
+with this module as a poor man’s concurrent GC.</p>
+
+<p>We’ll call GC after each request is been written out to the socket, so the
+client never sees the extra GC hit it.</p>
+
+<p>This middleware is <em>only</em> effective for applications that use a lot
+of memory, and will hurt simpler apps/endpoints that can process multiple
+requests before incurring GC.</p>
+
+<p>This middleware is only designed to work with unicorn, as it harms
+performance with keepalive-enabled servers.</p>
+
+<p>Example (in config.ru):</p>
+
+<pre>require 'unicorn/oob_gc'
+
+# GC ever two requests that hit /expensive/foo or /more_expensive/foo
+# in your app.  By default, this will GC once every 5 requests
+# for all endpoints in your app
+use Unicorn::OobGC, 2, %r{\A/(?:expensive/foo|more_expensive/foo)}</pre>
+
+<p>Feedback from users of early implementations of this module:</p>
+<ul><li>
+<p><a
+href="http://comments.gmane.org/gmane.comp.lang.ruby.unicorn.general/486">comments.gmane.org/gmane.comp.lang.ruby.unicorn.general/486</a></p>
+</li><li>
+<p><a
+href="http://article.gmane.org/gmane.comp.lang.ruby.unicorn.general/596">article.gmane.org/gmane.comp.lang.ruby.unicorn.general/596</a></p>
+</li></ul>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

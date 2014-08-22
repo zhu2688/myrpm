@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"remote:EFI"$Gem::TestCase::StaticSet#remote;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"CA StaticSet ignores remote because it has a fixed set of gems.;T:
+@file0FI"lib/rubygems/test_case.rb;T

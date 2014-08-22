@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Raindrops::Watcher</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/raindrops/watcher_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops/watcher.rb">lib/raindrops/watcher.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="Watcher/Tailer.html">Raindrops::Watcher::Tailer</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="../Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="../Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="../Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="../Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="../Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="../Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="../Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="../Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Raindrops::Watcher</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="Watcher.html">Raindrops::Watcher</a> is a stand-alone Rack
+application for watching any number of TCP and UNIX listeners (all of them
+by default).</p>
+
+<p>It depends on the <a href="http://rubygems.org/gems/aggregate">Aggregate
+RubyGem</a></p>
+
+<p>In your Rack config.ru:</p>
+
+<pre>run Raindrops::Watcher(options = {})</pre>
+
+<p>It takes the following options hash:</p>
+<ul><li>
+<p>:listeners - an array of listener names, (e.g. %w(0.0.0.0:80 /tmp/sock))</p>
+</li><li>
+<p>:delay - interval between stats updates in seconds (default: 1)</p>
+</li></ul>
+
+<p><a href="Watcher.html">Raindrops::Watcher</a> is compatible any
+thread-safe/thread-aware Rack middleware.  It does not work well with
+multi-process web servers but can be used to monitor them.  It consumes
+minimal resources with the default :delay.</p>
+
+<h2>HTTP endpoints</h2>
+
+<h3>GET /</h3>
+
+<p>Returns an HTML summary listing of all listen interfaces watched on</p>
+
+<h3>GET /active/$LISTENER.txt</h3>
+
+<p>Returns a plain text summary + histogram with X-* HTTP headers for active
+connections.</p>
+
+<p>e.g.: curl <a
+href="http://raindrops-demo.bogomips.org/active/0.0.0.0%3A80.txt">raindrops-demo.bogomips.org/active/0.0.0.0%3A80.txt</a></p>
+
+<h3>GET /active/$LISTENER.html</h3>
+
+<p>Returns an HTML summary + histogram with X-* HTTP headers for active
+connections.</p>
+
+<p>e.g.: curl <a
+href="http://raindrops-demo.bogomips.org/active/0.0.0.0%3A80.html">raindrops-demo.bogomips.org/active/0.0.0.0%3A80.html</a></p>
+
+<h3>GET /queued/$LISTENER.txt</h3>
+
+<p>Returns a plain text summary + histogram with X-* HTTP headers for queued
+connections.</p>
+
+<p>e.g.: curl <a
+href="http://raindrops-demo.bogomips.org/queued/0.0.0.0%3A80.txt">raindrops-demo.bogomips.org/queued/0.0.0.0%3A80.txt</a></p>
+
+<h3>GET /queued/$LISTENER.html</h3>
+
+<p>Returns an HTML summary + histogram with X-* HTTP headers for queued
+connections.</p>
+
+<p>e.g.: curl <a
+href="http://raindrops-demo.bogomips.org/queued/0.0.0.0%3A80.html">raindrops-demo.bogomips.org/queued/0.0.0.0%3A80.html</a></p>
+
+<h3>POST /reset/$LISTENER</h3>
+
+<p>Resets the active and queued statistics for the given listener.</p>
+
+<h3>GET /tail/$LISTENER.txt?active_min=1&amp;queued_min=1</h3>
+
+<p>Streams chunked a response to the client. Interval is the preconfigured
+<tt>:delay</tt> of the application (default 1 second)</p>
+
+<p>The response is plain text in the following format:</p>
+
+<pre>ISO8601_TIMESTAMP LISTENER_NAME ACTIVE_COUNT QUEUED_COUNT LINEFEED</pre>
+
+<p>Query parameters:</p>
+<ul><li>
+<p>active_min - do not stream a line until this active count is reached</p>
+</li><li>
+<p>queued_min - do not stream a line until this queued count is reached</p>
+</li></ul>
+
+<h2>Response headers (mostly the same names as <a href="LastDataRecv.html">Raindrops::LastDataRecv</a>)</h2>
+<ul><li>
+<p>X-Count   - number of samples polled</p>
+</li><li>
+<p>X-Last-Reset - date since the last reset</p>
+</li></ul>
+
+<p>The following headers are only present if X-Count is greater than one.</p>
+<ul><li>
+<p>X-Min     - lowest number of connections recorded</p>
+</li><li>
+<p>X-Max     - highest number of connections recorded</p>
+</li><li>
+<p>X-Mean    - mean number of connections recorded</p>
+</li><li>
+<p>X-Std-Dev - standard deviation of connection count</p>
+</li><li>
+<p>X-Outliers-Low - number of low outliers (hopefully many for queued)</p>
+</li><li>
+<p>X-Outliers-High - number of high outliers (hopefully zero for queued)</p>
+</li><li>
+<p>X-Current - current number of connections</p>
+</li><li>
+<p>X-First-Peak-At - date of when X-Max was first reached</p>
+</li><li>
+<p>X-Last-Peak-At - date of when X-Max was last reached</p>
+</li></ul>
+
+<h1>Demo Server</h1>
+
+<p>There is a server running this app at <a
+href="http://raindrops-demo.bogomips.org/">raindrops-demo.bogomips.org/</a>
+The <a href="Middleware.html">Raindrops::Middleware</a> demo is also
+accessible at <a
+href="http://raindrops-demo.bogomips.org/_raindrops">raindrops-demo.bogomips.org/_raindrops</a></p>
+
+<p>The demo server is only limited to 30 users, so be sure not to abuse it by
+using the /tail/ endpoint too much.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

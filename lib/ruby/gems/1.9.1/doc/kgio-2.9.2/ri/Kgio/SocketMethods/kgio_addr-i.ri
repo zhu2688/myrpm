@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"kgio_addr:ETI""Kgio::SocketMethods#kgio_addr;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"<Returns the client IP address of the socket as a string;TI"!(e.g. "127.0.0.1" or "::1").;TI"=This is always the value of the Kgio::LOCALHOST constant;TI"for UNIX domain sockets.;T:
+@file0FI"ext/kgio/kgio_ext.c;T

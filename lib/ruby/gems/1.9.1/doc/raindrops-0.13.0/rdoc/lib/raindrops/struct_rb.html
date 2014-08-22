@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: struct.rb [raindrops-0.13.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2014-08-22 21:04:08 +0800</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+      <dt class="scs-url">Trac URL</dt>
+      <dd class="scs-url"><a target="_top"
+        href="http://bogomips.org/raindrops.git/tree/lib/raindrops/struct.rb">http://bogomips.org/raindrops.git/tree/lib/raindrops/struct.rb</a></dd>
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>This is a wrapper around <a href="../../Raindrops.html">Raindrops</a>
+objects much like the core Ruby Struct can be seen as a wrapper around the
+core Array class. It’s usage is similar to the core Struct class, except
+its fields may only be used to house unsigned long integers.</p>
+
+<pre>class Foo &lt; Raindrops::Struct.new(:readers, :writers)
+end
+
+foo = Foo.new 0, 0
+
+foo.incr_writers    -&gt; 1
+foo.incr_readers    -&gt; 1</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

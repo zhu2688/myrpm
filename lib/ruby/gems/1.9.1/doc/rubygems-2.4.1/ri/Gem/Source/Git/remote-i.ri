@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"remote:EFI"Gem::Source::Git#remote;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BWhen false the cache for this repository will not be updated.;T:
+@file0FI"lib/rubygems/source/git.rb;T

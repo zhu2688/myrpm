@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"remote:EFI"Gem::Resolver::Set#remote;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"7Set to true to disable network access for this set;T:
+@file0FI"!lib/rubygems/resolver/set.rb;T

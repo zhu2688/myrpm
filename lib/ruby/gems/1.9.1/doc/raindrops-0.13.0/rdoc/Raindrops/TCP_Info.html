@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Raindrops::TCP_Info</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/raindrops/middleware_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops/middleware.rb">lib/raindrops/middleware.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-get-21">#get!</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="../Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="../Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="../Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="../Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="../Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="../Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="../Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="../Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Raindrops::TCP_Info</h1>
+
+    <div id="description" class="description">
+      
+<p>This is used to wrap “struct tcp_info” as described in tcp(7) and
+/usr/include/linux/tcp.h.  The following readers methods are defined
+corresponding to the “tcpi_” fields in the tcp_info struct.</p>
+
+<p>In particular, the <tt>last_data_recv</tt> field is useful for measuring
+the amount of time a client spent in the listen queue before +accept()+,
+but only if <tt>TCP_DEFER_ACCEPT</tt> is used with the listen socket (it is
+on by default in Unicorn).</p>
+<ul><li>
+<p>state</p>
+</li><li>
+<p>ca_state</p>
+</li><li>
+<p>retransmits</p>
+</li><li>
+<p>probes</p>
+</li><li>
+<p>backoff</p>
+</li><li>
+<p>options</p>
+</li><li>
+<p>snd_wscale</p>
+</li><li>
+<p>rcv_wscale</p>
+</li><li>
+<p>rto</p>
+</li><li>
+<p>ato</p>
+</li><li>
+<p>snd_mss</p>
+</li><li>
+<p>rcv_mss</p>
+</li><li>
+<p>unacked</p>
+</li><li>
+<p>sacked</p>
+</li><li>
+<p>lost</p>
+</li><li>
+<p>retrans</p>
+</li><li>
+<p>fackets</p>
+</li><li>
+<p>last_data_sent</p>
+</li><li>
+<p>last_ack_sent</p>
+</li><li>
+<p>last_data_recv</p>
+</li><li>
+<p>last_ack_recv</p>
+</li><li>
+<p>pmtu</p>
+</li><li>
+<p>rcv_ssthresh</p>
+</li><li>
+<p>rtt</p>
+</li><li>
+<p>rttvar</p>
+</li><li>
+<p>snd_ssthresh</p>
+</li><li>
+<p>snd_cwnd</p>
+</li><li>
+<p>advmss</p>
+</li><li>
+<p>reordering</p>
+</li><li>
+<p>rcv_rtt</p>
+</li><li>
+<p>rcv_space</p>
+</li><li>
+<p>total_retrans</p>
+</li></ul>
+
+<p><a
+href="http://kernel.org/doc/man-pages/online/pages/man7/tcp.7.html">kernel.org/doc/man-pages/online/pages/man7/tcp.7.html</a></p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">Raindrops::TCP_Info.new(tcp_socket)  &rarr; TCP_Info object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Reads a <a href="TCP_Info.html">TCP_Info</a> object from any given
+<tt>tcp_socket</tt>.  See the tcp(7) manpage and /usr/include/linux/tcp.h
+for more details.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE init(VALUE self, VALUE io)
+{
+        int fd = my_fileno(io);
+        struct tcp_info *info = DATA_PTR(self);
+        socklen_t len = (socklen_t)sizeof(struct tcp_info);
+        int rc = getsockopt(fd, IPPROTO_TCP, TCP_INFO, info, &amp;len);
+
+        if (rc != 0)
+                rb_sys_fail(&quot;getsockopt&quot;);
+
+        return self;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="get-21-method" class="method-detail ">
+          <a name="method-i-get-21"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">Raindrops::TCP_Info.new(tcp_socket)  &rarr; TCP_Info object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Reads a <a href="TCP_Info.html">TCP_Info</a> object from any given
+<tt>tcp_socket</tt>.  See the tcp(7) manpage and /usr/include/linux/tcp.h
+for more details.</p>
+            
+
+            
+            <div class="method-source-code" id="get-21-source">
+<pre>
+static VALUE init(VALUE self, VALUE io)
+{
+        int fd = my_fileno(io);
+        struct tcp_info *info = DATA_PTR(self);
+        socklen_t len = (socklen_t)sizeof(struct tcp_info);
+        int rc = getsockopt(fd, IPPROTO_TCP, TCP_INFO, info, &amp;len);
+
+        if (rc != 0)
+                rb_sys_fail(&quot;getsockopt&quot;);
+
+        return self;
+}</pre>
+            </div><!-- get-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-21-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

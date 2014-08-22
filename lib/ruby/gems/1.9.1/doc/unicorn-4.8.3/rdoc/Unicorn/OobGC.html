@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Unicorn::OobGC</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/unicorn/oob_gc_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicorn/oob_gc.rb">lib/unicorn/oob_gc.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Application_Timeouts.html">Application_Timeouts</a></li>
+        
+          <li class="file"><a href="../CONTRIBUTORS.html">CONTRIBUTORS</a></li>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../DESIGN.html">DESIGN</a></li>
+        
+          <li class="file"><a href="../FAQ.html">FAQ</a></li>
+        
+          <li class="file"><a href="../HACKING.html">HACKING</a></li>
+        
+          <li class="file"><a href="../ISSUES.html">ISSUES</a></li>
+        
+          <li class="file"><a href="../KNOWN_ISSUES.html">KNOWN_ISSUES</a></li>
+        
+          <li class="file"><a href="../LATEST.html">LATEST</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../Links.html">Links</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../PHILOSOPHY.html">PHILOSOPHY</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../SIGNALS.html">SIGNALS</a></li>
+        
+          <li class="file"><a href="../Sandbox.html">Sandbox</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../TUNING.html">TUNING</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Unicorn.html">Unicorn</a></li>
+        
+          <li><a href="../Unicorn/App.html">Unicorn::App</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails.html">Unicorn::App::OldRails</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails/Static.html">Unicorn::App::OldRails::Static</a></li>
+        
+          <li><a href="../Unicorn/CGIWrapper.html">Unicorn::CGIWrapper</a></li>
+        
+          <li><a href="../Unicorn/ClientShutdown.html">Unicorn::ClientShutdown</a></li>
+        
+          <li><a href="../Unicorn/Configurator.html">Unicorn::Configurator</a></li>
+        
+          <li><a href="../Unicorn/HttpParser.html">Unicorn::HttpParser</a></li>
+        
+          <li><a href="../Unicorn/HttpServer.html">Unicorn::HttpServer</a></li>
+        
+          <li><a href="../Unicorn/OobGC.html">Unicorn::OobGC</a></li>
+        
+          <li><a href="../Unicorn/PrereadInput.html">Unicorn::PrereadInput</a></li>
+        
+          <li><a href="../Unicorn/SSLClient.html">Unicorn::SSLClient</a></li>
+        
+          <li><a href="../Unicorn/SSLConfigurator.html">Unicorn::SSLConfigurator</a></li>
+        
+          <li><a href="../Unicorn/StreamInput.html">Unicorn::StreamInput</a></li>
+        
+          <li><a href="../Unicorn/TeeInput.html">Unicorn::TeeInput</a></li>
+        
+          <li><a href="../Unicorn/TmpIO.html">Unicorn::TmpIO</a></li>
+        
+          <li><a href="../Unicorn/Util.html">Unicorn::Util</a></li>
+        
+          <li><a href="../Unicorn/Worker.html">Unicorn::Worker</a></li>
+        
+          <li><a href="../ExecCgi/ExecCgi.html">ExecCgi::ExecCgi</a></li>
+        
+          <li><a href="../Inetd/Inetd.html">Inetd::Inetd</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Unicorn::OobGC</h1>
+
+    <div id="description" class="description">
+      
+<p>Strongly consider <a
+href="https://github.com/tmm1/gctools">github.com/tmm1/gctools</a> if using
+Ruby 2.1+ It is built on new APIs in Ruby 2.1, so it is more intelligent
+than this historical implementation.</p>
+
+<p>Users on Ruby 2.0 (not 2.1+) may also want to check out
+lib/middleware/unicorn_oobgc.rb from the Discourse project (<a
+href="https://github.com/discourse/discourse">github.com/discourse/discourse</a>)</p>
+
+<p>The following information is only for historical versions of Ruby.</p>
+
+<p>Runs GC after requests, after closing the client socket and before
+attempting to accept more connections.</p>
+
+<p>This shouldn’t hurt overall performance as long as the server cluster is at
+&lt;50% CPU capacity, and improves the performance of most memory intensive
+requests.  This serves to improve <em>client-visible</em> performance
+(possibly at the cost of overall performance).</p>
+
+<p>Increasing the number of <tt>worker_processes</tt> may be necessary to
+improve average client response times because some of your workers will be
+busy doing GC and unable to service clients.  Think of using more workers
+with this module as a poor man’s concurrent GC.</p>
+
+<p>We’ll call GC after each request is been written out to the socket, so the
+client never sees the extra GC hit it.</p>
+
+<p>This middleware is <em>only</em> effective for applications that use a lot
+of memory, and will hurt simpler apps/endpoints that can process multiple
+requests before incurring GC.</p>
+
+<p>This middleware is only designed to work with unicorn, as it harms
+performance with keepalive-enabled servers.</p>
+
+<p>Example (in config.ru):</p>
+
+<pre>require 'unicorn/oob_gc'
+
+# GC ever two requests that hit /expensive/foo or /more_expensive/foo
+# in your app.  By default, this will GC once every 5 requests
+# for all endpoints in your app
+use Unicorn::OobGC, 2, %r{\A/(?:expensive/foo|more_expensive/foo)}</pre>
+
+<p>Feedback from users of early implementations of this module:</p>
+<ul><li>
+<p><a
+href="http://comments.gmane.org/gmane.comp.lang.ruby.unicorn.general/486">comments.gmane.org/gmane.comp.lang.ruby.unicorn.general/486</a></p>
+</li><li>
+<p><a
+href="http://article.gmane.org/gmane.comp.lang.ruby.unicorn.general/596">article.gmane.org/gmane.comp.lang.ruby.unicorn.general/596</a></p>
+</li></ul>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(app, interval = 5, path = %r{\A/})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>this pretends to be Rack middleware because it used to be But we need to
+hook into unicorn internals so we need to close the socket before clearing
+the request env.</p>
+
+<p><tt>interval</tt> is the number of requests matching the <tt>path</tt>
+regular expression before invoking GC.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/oob_gc.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">app</span>, <span class="ruby-identifier">interval</span> = <span class="ruby-value">5</span>, <span class="ruby-identifier">path</span> = <span class="ruby-regexp">%{\A/}</span>)
+  <span class="ruby-identifier">@@nr</span> = <span class="ruby-identifier">interval</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">const_set</span> <span class="ruby-value">:OOBGC_PATH</span>, <span class="ruby-identifier">path</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">const_set</span> <span class="ruby-value">:OOBGC_INTERVAL</span>, <span class="ruby-identifier">interval</span>
+  <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">each_object</span>(<span class="ruby-constant">Unicorn</span><span class="ruby-operator">::</span><span class="ruby-constant">HttpServer</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">s</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-keyword">self</span>)
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">const_set</span> <span class="ruby-value">:OOBGC_ENV</span>, <span class="ruby-identifier">s</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:@request</span>).<span class="ruby-identifier">env</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">app</span> <span class="ruby-comment"># pretend to be Rack middleware since it was in the past</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Unicorn::CGIWrapper</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/unicorn/cgi_wrapper_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicorn/cgi_wrapper.rb">lib/unicorn/cgi_wrapper.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">CGI</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-header">#header</a></li>
+          
+          <li><a href="#method-i-out">#out</a></li>
+          
+          <li><a href="#method-i-rack_response">#rack_response</a></li>
+          
+          <li><a href="#method-i-stdinput">#stdinput</a></li>
+          
+          <li><a href="#method-i-stdoutput">#stdoutput</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Application_Timeouts.html">Application_Timeouts</a></li>
+        
+          <li class="file"><a href="../CONTRIBUTORS.html">CONTRIBUTORS</a></li>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../DESIGN.html">DESIGN</a></li>
+        
+          <li class="file"><a href="../FAQ.html">FAQ</a></li>
+        
+          <li class="file"><a href="../HACKING.html">HACKING</a></li>
+        
+          <li class="file"><a href="../ISSUES.html">ISSUES</a></li>
+        
+          <li class="file"><a href="../KNOWN_ISSUES.html">KNOWN_ISSUES</a></li>
+        
+          <li class="file"><a href="../LATEST.html">LATEST</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../Links.html">Links</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../PHILOSOPHY.html">PHILOSOPHY</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../SIGNALS.html">SIGNALS</a></li>
+        
+          <li class="file"><a href="../Sandbox.html">Sandbox</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../TUNING.html">TUNING</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Unicorn.html">Unicorn</a></li>
+        
+          <li><a href="../Unicorn/App.html">Unicorn::App</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails.html">Unicorn::App::OldRails</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails/Static.html">Unicorn::App::OldRails::Static</a></li>
+        
+          <li><a href="../Unicorn/CGIWrapper.html">Unicorn::CGIWrapper</a></li>
+        
+          <li><a href="../Unicorn/ClientShutdown.html">Unicorn::ClientShutdown</a></li>
+        
+          <li><a href="../Unicorn/Configurator.html">Unicorn::Configurator</a></li>
+        
+          <li><a href="../Unicorn/HttpParser.html">Unicorn::HttpParser</a></li>
+        
+          <li><a href="../Unicorn/HttpServer.html">Unicorn::HttpServer</a></li>
+        
+          <li><a href="../Unicorn/OobGC.html">Unicorn::OobGC</a></li>
+        
+          <li><a href="../Unicorn/PrereadInput.html">Unicorn::PrereadInput</a></li>
+        
+          <li><a href="../Unicorn/SSLClient.html">Unicorn::SSLClient</a></li>
+        
+          <li><a href="../Unicorn/SSLConfigurator.html">Unicorn::SSLConfigurator</a></li>
+        
+          <li><a href="../Unicorn/StreamInput.html">Unicorn::StreamInput</a></li>
+        
+          <li><a href="../Unicorn/TeeInput.html">Unicorn::TeeInput</a></li>
+        
+          <li><a href="../Unicorn/TmpIO.html">Unicorn::TmpIO</a></li>
+        
+          <li><a href="../Unicorn/Util.html">Unicorn::Util</a></li>
+        
+          <li><a href="../Unicorn/Worker.html">Unicorn::Worker</a></li>
+        
+          <li><a href="../ExecCgi/ExecCgi.html">ExecCgi::ExecCgi</a></li>
+        
+          <li><a href="../Inetd/Inetd.html">Inetd::Inetd</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Unicorn::CGIWrapper</h1>
+
+    <div id="description" class="description">
+      
+<p>The beginning of a complete wrapper around Unicorn’s internal HTTP
+processing system but maintaining the original Ruby CGI module.  Use this
+only as a crutch to get existing CGI based systems working.  It should
+handle everything, but please notify us if you see special warnings.  This
+work is still very alpha so we need testers to help work out the various
+corner cases.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="CHARSET">CHARSET</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CONNECTION">CONNECTION</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CONTENT_LENGTH">CONTENT_LENGTH</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="CONTENT_TYPE">CONTENT_TYPE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="COOKIE">COOKIE</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="HEADER_MAP">HEADER_MAP</a></dt>
+          
+          <dd class="description"><p>this maps CGI header names to HTTP header names</p></dd>
+          
+        
+          <dt><a name="NPH">NPH</a></dt>
+          
+          <dd class="description"><p>these are stripped out of any keys passed to <a
+href="CGIWrapper.html#method-i-header">CGIWrapper.header</a> function</p></dd>
+          
+        
+          <dt><a name="RACK_ERRORS">RACK_ERRORS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="RACK_INPUT">RACK_INPUT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="SET_COOKIE">SET_COOKIE</a></dt>
+          
+          <dd class="description"><p>some of these are common strings, but this is the only module using them
+and the reason they’re not in Unicorn::Const</p></dd>
+          
+        
+          <dt><a name="STATUS">STATUS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Status">Status</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="body-attribute-method" class="method-detail">
+          <a name="body"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">body</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="env_table-attribute-method" class="method-detail">
+          <a name="env_table"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">env_table</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(rack_env, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Takes an a Rackable environment, plus any additional CGI.new arguments
+These are used internally to create a wrapper around the real CGI while
+maintaining Rack/Unicorn’s view of the world.  This this will NOT deal well
+with large responses that take up a lot of memory, but neither does the CGI
+nor the original <a href="CGIWrapper.html">CGIWrapper</a> from Mongrel…</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">rack_env</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-ivar">@env_table</span> = <span class="ruby-identifier">rack_env</span>
+  <span class="ruby-ivar">@status</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-ivar">@head</span> = {}
+  <span class="ruby-ivar">@headv</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>,<span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = [] }
+  <span class="ruby-ivar">@body</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&quot;&quot;</span>)
+  <span class="ruby-keyword">super</span>(*<span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="header-method" class="method-detail ">
+          <a name="method-i-header"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">header</span><span
+              class="method-args">(options = "text/html")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The header is typically called to send back the header.  In our case we
+collect it into a hash for later usage.  This can be called multiple times
+to set different cookies.</p>
+            
+
+            
+            <div class="method-source-code" id="header-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">header</span>(<span class="ruby-identifier">options</span> = <span class="ruby-string">&quot;text/html&quot;</span>)
+  <span class="ruby-comment"># if they pass in a string then just write the Content-Type</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">options</span>
+    <span class="ruby-ivar">@head</span>[<span class="ruby-constant">CONTENT_TYPE</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">HEADER_MAP</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">from</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">from</span>) <span class="ruby-keyword">or</span> <span class="ruby-keyword">next</span>
+      <span class="ruby-ivar">@head</span>[<span class="ruby-identifier">to</span>] = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">to_s</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-ivar">@head</span>[<span class="ruby-constant">CONTENT_TYPE</span>] <span class="ruby-operator">||=</span> <span class="ruby-string">&quot;text/html&quot;</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">charset</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">CHARSET</span>)
+      <span class="ruby-ivar">@head</span>[<span class="ruby-constant">CONTENT_TYPE</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;; charset=#{charset}&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># lots of ways to set cookies</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">cookie</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">COOKIE</span>)
+      <span class="ruby-identifier">set_cookies</span> = <span class="ruby-ivar">@headv</span>[<span class="ruby-constant">SET_COOKIE</span>]
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">cookie</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>
+        <span class="ruby-identifier">cookie</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set_cookies</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_s</span> }
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">Hash</span>
+        <span class="ruby-identifier">cookie</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">set_cookies</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_s</span> }
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">set_cookies</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cookie</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@status</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">STATUS</span>) <span class="ruby-comment"># all lower-case</span>
+
+    <span class="ruby-comment"># drop the keys we don't want anymore</span>
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">NPH</span>)
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">CONNECTION</span>)
+
+    <span class="ruby-comment"># finally, set the rest of the headers as-is, allowing duplicates</span>
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@headv</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span> }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># doing this fakes out the cgi library to think the headers are empty</span>
+  <span class="ruby-comment"># we then do the real headers in the out function call later</span>
+  <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- header-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- header-method -->
+
+      
+        <div id="out-method" class="method-detail ">
+          <a name="method-i-out"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">out</span><span
+              class="method-args">(options = "text/html")</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The dumb thing is people can call header or this or both and in any order. 
+So, we just reuse header and then finalize the HttpResponse the right way. 
+This will have no effect if called the second time if the first “outputted”
+anything.</p>
+            
+
+            
+            <div class="method-source-code" id="out-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">out</span>(<span class="ruby-identifier">options</span> = <span class="ruby-string">&quot;text/html&quot;</span>)
+  <span class="ruby-identifier">header</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-ivar">@body</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">yield</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">block_given?</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- out-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- out-method -->
+
+      
+        <div id="rack_response-method" class="method-detail ">
+          <a name="method-i-rack_response"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rack_response</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>finalizes the response in a way Rack applications would expect</p>
+            
+
+            
+            <div class="method-source-code" id="rack_response-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rack_response</span>
+  <span class="ruby-comment"># @head[CONTENT_LENGTH] ||= @body.size</span>
+  <span class="ruby-ivar">@headv</span>[<span class="ruby-constant">SET_COOKIE</span>].<span class="ruby-identifier">concat</span>(<span class="ruby-ivar">@output_cookies</span>) <span class="ruby-keyword">if</span> <span class="ruby-ivar">@output_cookies</span>
+  <span class="ruby-ivar">@headv</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@head</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">&quot;\n&quot;</span>) <span class="ruby-keyword">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Capitalized &quot;Status:&quot;, with human-readable status code (e.g. &quot;200 OK&quot;)</span>
+  <span class="ruby-ivar">@status</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@head</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-constant">Status</span>)
+
+  [ <span class="ruby-ivar">@status</span> <span class="ruby-operator">||</span> <span class="ruby-value">500</span>, <span class="ruby-ivar">@head</span>, [ <span class="ruby-ivar">@body</span>.<span class="ruby-identifier">string</span> ] ]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rack_response-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rack_response-method -->
+
+      
+        <div id="stdinput-method" class="method-detail ">
+          <a name="method-i-stdinput"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stdinput</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Used to wrap the normal stdinput variable used inside CGI.</p>
+            
+
+            
+            <div class="method-source-code" id="stdinput-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 137</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stdinput</span>
+  <span class="ruby-ivar">@env_table</span>[<span class="ruby-constant">RACK_INPUT</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stdinput-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stdinput-method -->
+
+      
+        <div id="stdoutput-method" class="method-detail ">
+          <a name="method-i-stdoutput"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stdoutput</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>return a pointer to the StringIO body since it’s STDOUT-like</p>
+            
+
+            
+            <div class="method-source-code" id="stdoutput-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/cgi_wrapper.rb, line 142</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stdoutput</span>
+  <span class="ruby-ivar">@body</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stdoutput-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stdoutput-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

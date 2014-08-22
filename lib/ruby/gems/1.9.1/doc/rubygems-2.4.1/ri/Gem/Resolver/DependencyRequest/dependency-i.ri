@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"dependency:EFI"0Gem::Resolver::DependencyRequest#dependency;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I" The wrapped Gem::Dependency;T:
+@file0FI"0lib/rubygems/resolver/dependency_request.rb;T

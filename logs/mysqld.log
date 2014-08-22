@@ -1,0 +1,88 @@
+140822 20:40:47 mysqld_safe Starting mysqld daemon with databases from /opt/myrpm/data
+140822 20:40:47 InnoDB: The InnoDB memory heap is disabled
+140822 20:40:47 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+140822 20:40:47 InnoDB: Compressed tables use zlib 1.2.3
+140822 20:40:47 InnoDB: Initializing buffer pool, size = 64.0M
+140822 20:40:47 InnoDB: Completed initialization of buffer pool
+InnoDB: The first specified data file ./ibdata1 did not exist:
+InnoDB: a new database to be created!
+140822 20:40:47  InnoDB: Setting file ./ibdata1 size to 20 MB
+InnoDB: Database physically writes the file full: wait...
+140822 20:40:47  InnoDB: Log file ./ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile0 size to 16 MB
+InnoDB: Database physically writes the file full: wait...
+140822 20:40:48  InnoDB: Log file ./ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file ./ib_logfile1 size to 16 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: 127 rollback segment(s) active.
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+140822 20:40:48  InnoDB: Waiting for the background threads to start
+140822 20:40:49 InnoDB: 5.5.39 started; log sequence number 0
+140822 20:40:49 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+140822 20:40:49 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+140822 20:40:49 [Note] Server socket created on IP: '127.0.0.1'.
+140822 20:40:49 [ERROR] /opt/myrpm/bin/mysqld: Can't create/write to file '/opt/myrpm/var/run/mysql.pid' (Errcode: 2)
+140822 20:40:49 [ERROR] Can't start server: can't create PID file: No such file or directory
+140822 20:40:49 mysqld_safe mysqld from pid file /opt/myrpm/var/run/mysql.pid ended
+140822 20:41:23 mysqld_safe Starting mysqld daemon with databases from /opt/myrpm/data
+140822 20:41:23 InnoDB: The InnoDB memory heap is disabled
+140822 20:41:23 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+140822 20:41:23 InnoDB: Compressed tables use zlib 1.2.3
+140822 20:41:23 InnoDB: Initializing buffer pool, size = 64.0M
+140822 20:41:23 InnoDB: Completed initialization of buffer pool
+140822 20:41:23 InnoDB: highest supported file format is Barracuda.
+InnoDB: Log scan progressed past the checkpoint lsn 48941
+140822 20:41:23  InnoDB: Database was not shut down normally!
+InnoDB: Starting crash recovery.
+InnoDB: Reading tablespace information from the .ibd files...
+InnoDB: Restoring possible half-written data pages from the doublewrite
+InnoDB: buffer...
+InnoDB: Doing recovery: scanned up to log sequence number 1595668
+140822 20:41:23  InnoDB: Starting an apply batch of log records to the database...
+InnoDB: Progress in percents: 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 
+InnoDB: Apply batch completed
+140822 20:41:23  InnoDB: Waiting for the background threads to start
+140822 20:41:24 InnoDB: 5.5.39 started; log sequence number 1595668
+140822 20:41:24 [Note] Recovering after a crash using mysql-bin
+140822 20:41:24 [Note] Starting crash recovery...
+140822 20:41:24 [Note] Crash recovery finished.
+140822 20:41:24 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+140822 20:41:24 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+140822 20:41:24 [Note] Server socket created on IP: '127.0.0.1'.
+140822 20:41:24 [Note] Event Scheduler: Loaded 0 events
+140822 20:41:25 [Note] /opt/myrpm/bin/mysqld: ready for connections.
+Version: '5.5.39-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+140822 20:42:54 [Note] /opt/myrpm/bin/mysqld: Normal shutdown
+
+140822 20:42:54 [Note] Event Scheduler: Purging the queue. 0 events
+140822 20:42:54  InnoDB: Starting shutdown...
+140822 20:42:55  InnoDB: Shutdown completed; log sequence number 1595668
+140822 20:42:55 [Note] /opt/myrpm/bin/mysqld: Shutdown complete
+
+140822 20:42:55 mysqld_safe mysqld from pid file /opt/myrpm/var/run/mysql.pid ended
+140822 21:31:17 mysqld_safe Starting mysqld daemon with databases from /opt/myrpm/data
+140822 21:31:17 InnoDB: The InnoDB memory heap is disabled
+140822 21:31:17 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+140822 21:31:17 InnoDB: Compressed tables use zlib 1.2.3
+140822 21:31:17 InnoDB: Initializing buffer pool, size = 64.0M
+140822 21:31:17 InnoDB: Completed initialization of buffer pool
+140822 21:31:17 InnoDB: highest supported file format is Barracuda.
+140822 21:31:17  InnoDB: Waiting for the background threads to start
+140822 21:31:18 InnoDB: 5.5.39 started; log sequence number 1595668
+140822 21:31:18 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+140822 21:31:18 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+140822 21:31:18 [Note] Server socket created on IP: '127.0.0.1'.
+140822 21:31:18 [Note] Event Scheduler: Loaded 0 events
+140822 21:31:18 [Note] /opt/myrpm/bin/mysqld: ready for connections.
+Version: '5.5.39-log'  socket: '/tmp/mysql.sock'  port: 3306  Source distribution
+140822 21:31:25 [Note] /opt/myrpm/bin/mysqld: Normal shutdown
+
+140822 21:31:25 [Note] Event Scheduler: Purging the queue. 0 events
+140822 21:31:25  InnoDB: Starting shutdown...
+140822 21:31:26  InnoDB: Shutdown completed; log sequence number 1595668
+140822 21:31:26 [Note] /opt/myrpm/bin/mysqld: Shutdown complete
+
+140822 21:31:26 mysqld_safe mysqld from pid file /opt/myrpm/var/run/mysql.pid ended

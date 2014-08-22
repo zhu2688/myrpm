@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"root_dir:EFI"Gem::Source::Git#root_dir;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"5The directory for cache and git gem installation;T:
+@file0FI"lib/rubygems/source/git.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"always_install:EFI"#Gem::RequestSet#always_install;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"7Array of gems to install even if already installed;T:
+@file0FI" lib/rubygems/request_set.rb;T

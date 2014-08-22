@@ -1,0 +1,8 @@
+{:ancestors{I"Kgio::Pipe:EF[I"IO;FI"Kgio::PipeMethods;FI"Kgio::UNIXServer;F[I"cUNIXServer;TI"Kgio::TCPServer;F[I"cTCPServer;TI"Kgio::Socket;F[I"cSocket;TI"mSocketMethods;TI"Kgio::TCPSocket;F[I"cTCPSocket;TI"mSocketMethods;TI"Kgio::UNIXSocket;F[I"cUNIXSocket;TI"mSocketMethods;TI"Kgio::File;F[I"	File;FI"mPipeMethods;TI"Kgio::SocketMethods;F[I"Kgio::DefaultWaiters;FI"Kgio::PipeMethods;F[@#:attributes{@![I"attr_accessor kgio_addr;F:class_methods{
+@[I"connect;TI"new;TI"
+start;T@[I"new;TI"
+start;T@[I"new;TI"
+start;TI"Kgio::File;F[I"tryopen;TI"	Kgio;F[I"accept_class;TI"accept_class=;TI"accept_cloexec=;TI"accept_cloexec?;TI"accept_nonblock=;TI"accept_nonblock?;TI"autopush=;TI"autopush?;TI"	poll;T:encodingIu:Encoding
+UTF-8;F:instance_methods{
+@[I"kgio_accept;TI"kgio_tryaccept;T@[I"kgio_accept;TI"kgio_tryaccept;T@[I"kgio_fastopen;T@![I"kgio_addr;TI"kgio_autopush=;TI"kgio_autopush?;TI"Kgio::DefaultWaiters;F[I"kgio_wait_readable;TI"kgio_wait_writable;T:modules[I"	Kgio;F@#I"Kgio::File;FI"Kgio::Pipe;F@
+I"Kgio::Socket;FI"Kgio::SocketMethods;FI"Kgio::TCPServer;FI"Kgio::TCPSocket;FI"Kgio::UNIXServer;FI"Kgio::UNIXSocket;F

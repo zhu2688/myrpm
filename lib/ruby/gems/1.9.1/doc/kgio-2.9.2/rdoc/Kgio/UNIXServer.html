@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Kgio::UNIXServer</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../ext/kgio/accept_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/kgio/accept.c">ext/kgio/accept.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">cUNIXServer</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-kgio_accept">#kgio_accept</a></li>
+          
+          <li><a href="#method-i-kgio_tryaccept">#kgio_tryaccept</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../HACKING.html">HACKING</a></li>
+        
+          <li class="file"><a href="../ISSUES.html">ISSUES</a></li>
+        
+          <li class="file"><a href="../LATEST.html">LATEST</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Kgio.html">Kgio</a></li>
+        
+          <li><a href="../Kgio/DefaultWaiters.html">Kgio::DefaultWaiters</a></li>
+        
+          <li><a href="../Kgio/File.html">Kgio::File</a></li>
+        
+          <li><a href="../Kgio/Pipe.html">Kgio::Pipe</a></li>
+        
+          <li><a href="../Kgio/PipeMethods.html">Kgio::PipeMethods</a></li>
+        
+          <li><a href="../Kgio/Socket.html">Kgio::Socket</a></li>
+        
+          <li><a href="../Kgio/SocketMethods.html">Kgio::SocketMethods</a></li>
+        
+          <li><a href="../Kgio/TCPServer.html">Kgio::TCPServer</a></li>
+        
+          <li><a href="../Kgio/TCPSocket.html">Kgio::TCPSocket</a></li>
+        
+          <li><a href="../Kgio/UNIXServer.html">Kgio::UNIXServer</a></li>
+        
+          <li><a href="../Kgio/UNIXSocket.html">Kgio::UNIXSocket</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Kgio::UNIXServer</h1>
+
+    <div id="description" class="description">
+      
+<p><a href="UNIXServer.html">Kgio::UNIXServer</a> should be used in place of
+the plain <a href="UNIXServer.html">UNIXServer</a> when <a
+href="UNIXServer.html#method-i-kgio_accept">kgio_accept</a> and <a
+href="UNIXServer.html#method-i-kgio_tryaccept">kgio_tryaccept</a> methods
+are needed.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="kgio_accept-method" class="method-detail ">
+          <a name="method-i-kgio_accept"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">server = Kgio::UNIXServer.new("/path/to/unix/socket")</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_accept &rarr; Kgio::Socket or nil</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_accept(klass = MySocket) &rarr; MySocket or nil</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_accept(nil, flags) &rarr; Kgio::Socket or nil</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Initiates a blocking accept and returns a generic <a
+href="Socket.html">Kgio::Socket</a> object with the kgio_addr attribute set
+(to the value of Kgio::LOCALHOST) on success.</p>
+
+<p>On Ruby implementations using native threads, this can use a blocking
+accept(2) (or accept4(2)) system call to avoid thundering herds.</p>
+
+<p>An optional <tt>klass</tt> argument may be specified to override the
+Kgio::Socket-class on a successful return value.</p>
+
+<p>An optional <tt>flags</tt> argument may also be specified. <tt>flags</tt>
+is a bitmask that may contain any combination of:</p>
+<ul><li>
+<p>Kgio::SOCK_CLOEXEC - close-on-exec flag (enabled by default)</p>
+</li><li>
+<p>Kgio::SOCK_NONBLOCK - non-blocking flag (unimportant)</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="kgio_accept-source">
+<pre>
+static VALUE unix_accept(int argc, VALUE *argv, VALUE self)
+{
+        struct accept_args a;
+
+        a.addr = NULL;
+        a.addrlen = NULL;
+        prepare_accept(&amp;a, self, argc, argv);
+        return my_accept(&amp;a, 0);
+}</pre>
+            </div><!-- kgio_accept-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kgio_accept-method -->
+
+      
+        <div id="kgio_tryaccept-method" class="method-detail ">
+          <a name="method-i-kgio_tryaccept"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">server = Kgio::UNIXServer.new("/path/to/unix/socket")</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_tryaccept &rarr; Kgio::Socket or nil</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_tryaccept(klass = MySocket) &rarr; MySocket or nil</span>
+            
+          </div>
+          
+          <div class="method-heading">
+            <span class="method-callseq">kgio_tryaccept(nil, flags) &rarr; Kgio::Socket or nil</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Initiates a non-blocking accept and returns a generic <a
+href="Socket.html">Kgio::Socket</a> object with the kgio_addr attribute set
+(to the value of Kgio::LOCALHOST) on success.</p>
+
+<p>An optional <tt>klass</tt> argument may be specified to override the
+Kgio::Socket-class on a successful return value.</p>
+
+<p>An optional <tt>flags</tt> argument may also be specified. <tt>flags</tt>
+is a bitmask that may contain any combination of:</p>
+<ul><li>
+<p>Kgio::SOCK_CLOEXEC - close-on-exec flag (enabled by default)</p>
+</li><li>
+<p>Kgio::SOCK_NONBLOCK - non-blocking flag (unimportant)</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="kgio_tryaccept-source">
+<pre>
+static VALUE unix_tryaccept(int argc, VALUE *argv, VALUE self)
+{
+        struct accept_args a;
+
+        a.addr = NULL;
+        a.addrlen = NULL;
+        prepare_accept(&amp;a, self, argc, argv);
+        return my_accept(&amp;a, 1);
+}</pre>
+            </div><!-- kgio_tryaccept-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- kgio_tryaccept-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

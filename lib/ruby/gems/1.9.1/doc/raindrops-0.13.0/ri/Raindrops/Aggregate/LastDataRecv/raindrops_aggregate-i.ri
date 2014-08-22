@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"raindrops_aggregate:EFI";Raindrops::Aggregate::LastDataRecv#raindrops_aggregate;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"BThe integer value of +last_data_recv+ is sent to this object.;TI"FThis is usually a duck type compatible with the \Aggregate class,;TI"8but can be *anything* that accepts the *<<* method.;T:
+@file0FI".lib/raindrops/aggregate/last_data_recv.rb;T

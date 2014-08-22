@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"root_dir:EFI"#Gem::Resolver::GitSet#root_dir;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"OThe root directory for git gems in this set.  This is usually Gem.dir, the;TI"-installation directory for regular gems.;T:
+@file0FI"%lib/rubygems/resolver/git_set.rb;T

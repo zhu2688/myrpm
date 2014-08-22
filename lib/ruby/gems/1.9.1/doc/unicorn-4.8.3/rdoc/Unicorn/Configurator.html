@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Unicorn::Configurator</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/unicorn/configurator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicorn/configurator.rb">lib/unicorn/configurator.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-after_fork">#after_fork</a></li>
+          
+          <li><a href="#method-i-before_exec">#before_exec</a></li>
+          
+          <li><a href="#method-i-before_fork">#before_fork</a></li>
+          
+          <li><a href="#method-i-check_client_connection">#check_client_connection</a></li>
+          
+          <li><a href="#method-i-client_body_buffer_size">#client_body_buffer_size</a></li>
+          
+          <li><a href="#method-i-listen">#listen</a></li>
+          
+          <li><a href="#method-i-logger">#logger</a></li>
+          
+          <li><a href="#method-i-pid">#pid</a></li>
+          
+          <li><a href="#method-i-preload_app">#preload_app</a></li>
+          
+          <li><a href="#method-i-rewindable_input">#rewindable_input</a></li>
+          
+          <li><a href="#method-i-stderr_path">#stderr_path</a></li>
+          
+          <li><a href="#method-i-stdout_path">#stdout_path</a></li>
+          
+          <li><a href="#method-i-timeout">#timeout</a></li>
+          
+          <li><a href="#method-i-user">#user</a></li>
+          
+          <li><a href="#method-i-worker_processes">#worker_processes</a></li>
+          
+          <li><a href="#method-i-working_directory">#working_directory</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Included Modules -->
+      <div id="includes-section" class="section">
+        <h3 class="section-header">Included Modules</h3>
+        <ul class="link-list">
+        
+        
+          <li><a class="include" href="../Unicorn.html">Unicorn</a></li>
+        
+        
+        
+          <li><a class="include" href="SSLConfigurator.html">Unicorn::SSLConfigurator</a></li>
+        
+        
+        </ul>
+      </div>
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Application_Timeouts.html">Application_Timeouts</a></li>
+        
+          <li class="file"><a href="../CONTRIBUTORS.html">CONTRIBUTORS</a></li>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../DESIGN.html">DESIGN</a></li>
+        
+          <li class="file"><a href="../FAQ.html">FAQ</a></li>
+        
+          <li class="file"><a href="../HACKING.html">HACKING</a></li>
+        
+          <li class="file"><a href="../ISSUES.html">ISSUES</a></li>
+        
+          <li class="file"><a href="../KNOWN_ISSUES.html">KNOWN_ISSUES</a></li>
+        
+          <li class="file"><a href="../LATEST.html">LATEST</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../Links.html">Links</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../PHILOSOPHY.html">PHILOSOPHY</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../SIGNALS.html">SIGNALS</a></li>
+        
+          <li class="file"><a href="../Sandbox.html">Sandbox</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../TUNING.html">TUNING</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Unicorn.html">Unicorn</a></li>
+        
+          <li><a href="../Unicorn/App.html">Unicorn::App</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails.html">Unicorn::App::OldRails</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails/Static.html">Unicorn::App::OldRails::Static</a></li>
+        
+          <li><a href="../Unicorn/CGIWrapper.html">Unicorn::CGIWrapper</a></li>
+        
+          <li><a href="../Unicorn/ClientShutdown.html">Unicorn::ClientShutdown</a></li>
+        
+          <li><a href="../Unicorn/Configurator.html">Unicorn::Configurator</a></li>
+        
+          <li><a href="../Unicorn/HttpParser.html">Unicorn::HttpParser</a></li>
+        
+          <li><a href="../Unicorn/HttpServer.html">Unicorn::HttpServer</a></li>
+        
+          <li><a href="../Unicorn/OobGC.html">Unicorn::OobGC</a></li>
+        
+          <li><a href="../Unicorn/PrereadInput.html">Unicorn::PrereadInput</a></li>
+        
+          <li><a href="../Unicorn/SSLClient.html">Unicorn::SSLClient</a></li>
+        
+          <li><a href="../Unicorn/SSLConfigurator.html">Unicorn::SSLConfigurator</a></li>
+        
+          <li><a href="../Unicorn/StreamInput.html">Unicorn::StreamInput</a></li>
+        
+          <li><a href="../Unicorn/TeeInput.html">Unicorn::TeeInput</a></li>
+        
+          <li><a href="../Unicorn/TmpIO.html">Unicorn::TmpIO</a></li>
+        
+          <li><a href="../Unicorn/Util.html">Unicorn::Util</a></li>
+        
+          <li><a href="../Unicorn/Worker.html">Unicorn::Worker</a></li>
+        
+          <li><a href="../ExecCgi/ExecCgi.html">ExecCgi::ExecCgi</a></li>
+        
+          <li><a href="../Inetd/Inetd.html">Inetd::Inetd</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Unicorn::Configurator</h1>
+
+    <div id="description" class="description">
+      
+<p>Implements a simple DSL for configuring a Unicorn server.</p>
+
+<p>See <a
+href="http://unicorn.bogomips.org/examples/unicorn.conf.rb">unicorn.bogomips.org/examples/unicorn.conf.rb</a>
+and <a
+href="http://unicorn.bogomips.org/examples/unicorn.conf.minimal.rb">unicorn.bogomips.org/examples/unicorn.conf.minimal.rb</a>
+example configuration files.  An example config file for use with nginx is
+also available at <a
+href="http://unicorn.bogomips.org/examples/nginx.conf">unicorn.bogomips.org/examples/nginx.conf</a></p>
+
+<p>See the <a href="../TUNING.html">TUNING.html</a> document for more
+information on tuning unicorn.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="after_fork-method" class="method-detail ">
+          <a name="method-i-after_fork"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">after_fork</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets <a href="Configurator.html#method-i-after_fork">after_fork</a> hook to
+a given block.  This block will be called by the worker after forking.  The
+following is an example hook which adds a per-process listener to every
+worker:</p>
+
+<pre>after_fork do |server,worker|
+  # per-process listener ports for debugging/admin:
+  addr = &quot;127.0.0.1:#{9293 + worker.nr}&quot;
+
+  # the negative :tries parameter indicates we will retry forever
+  # waiting on the existing process to exit with a 5 second :delay
+  # Existing options for Unicorn::Configurator#listen such as
+  # :backlog, :rcvbuf, :sndbuf are available here as well.
+  server.listen(addr, :tries =&gt; -1, :delay =&gt; 5, :backlog =&gt; 128)
+end</pre>
+            
+
+            
+            <div class="method-source-code" id="after_fork-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 152</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">after_fork</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">set_hook</span>(<span class="ruby-value">:after_fork</span>, <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- after_fork-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- after_fork-method -->
+
+      
+        <div id="before_exec-method" class="method-detail ">
+          <a name="method-i-before_exec"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">before_exec</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets the <a href="Configurator.html#method-i-before_exec">before_exec</a>
+hook to a given Proc object.  This Proc object will be called by the master
+process right before exec()-ing the new unicorn binary.  This is useful for
+freeing certain OS resources that you do NOT wish to share with the
+reexeced child process. There is no corresponding after_exec hook (for
+obvious reasons).</p>
+            
+
+            
+            <div class="method-source-code" id="before_exec-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">before_exec</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">set_hook</span>(<span class="ruby-value">:before_exec</span>, <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>], <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- before_exec-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- before_exec-method -->
+
+      
+        <div id="before_fork-method" class="method-detail ">
+          <a name="method-i-before_fork"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">before_fork</span><span
+              class="method-args">(*args, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets <a href="Configurator.html#method-i-before_fork">before_fork</a> got
+be a given Proc object.  This Proc object will be called by the master
+process before forking each worker.</p>
+            
+
+            
+            <div class="method-source-code" id="before_fork-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 159</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">before_fork</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">set_hook</span>(<span class="ruby-value">:before_fork</span>, <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>])
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- before_fork-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- before_fork-method -->
+
+      
+        <div id="check_client_connection-method" class="method-detail ">
+          <a name="method-i-check_client_connection"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_client_connection</span><span
+              class="method-args">(bool)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>When enabled, unicorn will check the client connection by writing the
+beginning of the HTTP headers before calling the application.</p>
+
+<p>This will prevent calling the application for clients who have disconnected
+while their connection was queued.</p>
+
+<p>This only affects clients connecting over Unix domain sockets and TCP via
+loopback (127.<b>.</b>.*).  It is unlikely to detect disconnects if the
+client is on a remote host (even on a fast LAN).</p>
+
+<p>This option cannot be used in conjunction with :tcp_nopush.</p>
+            
+
+            
+            <div class="method-source-code" id="check_client_connection-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 501</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_client_connection</span>(<span class="ruby-identifier">bool</span>)
+  <span class="ruby-identifier">set_bool</span>(<span class="ruby-value">:check_client_connection</span>, <span class="ruby-identifier">bool</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_client_connection-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_client_connection-method -->
+
+      
+        <div id="client_body_buffer_size-method" class="method-detail ">
+          <a name="method-i-client_body_buffer_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">client_body_buffer_size</span><span
+              class="method-args">(bytes)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>The maximum size (in <tt>bytes</tt>) to buffer in memory before resorting
+to a temporary file.  Default is 112 kilobytes. This option has no effect
+if “<a
+href="Configurator.html#method-i-rewindable_input">rewindable_input</a>” is
+set to <tt>false</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="client_body_buffer_size-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 486</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">client_body_buffer_size</span>(<span class="ruby-identifier">bytes</span>)
+  <span class="ruby-identifier">set_int</span>(<span class="ruby-value">:client_body_buffer_size</span>, <span class="ruby-identifier">bytes</span>, <span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- client_body_buffer_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- client_body_buffer_size-method -->
+
+      
+        <div id="listen-method" class="method-detail ">
+          <a name="method-i-listen"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">listen</span><span
+              class="method-args">(address, options = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Adds an <tt>address</tt> to the existing listener set.  May be specified
+more than once.  <tt>address</tt> may be an Integer port number for a TCP
+port, an “IP_ADDRESS:PORT” for TCP listeners or a pathname for UNIX domain
+sockets.</p>
+
+<pre>listen 3000 # listen to port 3000 on all TCP interfaces
+listen &quot;127.0.0.1:3000&quot;  # listen to port 3000 on the loopback interface
+listen &quot;/path/to/.unicorn.sock&quot; # listen on the given Unix domain socket
+listen &quot;[::1]:3000&quot; # listen to port 3000 on the IPv6 loopback interface</pre>
+
+<p>When using Unix domain sockets, be sure: 1) the path matches the one used
+by nginx 2) uses the same filesystem namespace as the nginx process For
+systemd users using PrivateTmp=true (for either nginx or unicorn), this
+means Unix domain sockets must not be placed in /tmp</p>
+
+<p>The following options may be specified (but are generally not needed):</p>
+<dl class="rdoc-list"><dt>:backlog =&gt; number of clients</dt>
+<dd>
+<p>This is the backlog of the listen() syscall.</p>
+
+<p>Some operating systems allow negative values here to specify the maximum
+allowable value.  In most cases, this number is only recommendation and
+there are other OS-specific tunables and variables that can affect this
+number.  See the listen(2) syscall documentation of your OS for the exact
+semantics of this.</p>
+
+<p>If you are running unicorn on multiple machines, lowering this number can
+help your load balancer detect when a machine is overloaded and give
+requests to a different machine.</p>
+
+<p>Default: 1024</p>
+</dd><dt>:rcvbuf =&gt; bytes, :sndbuf =&gt; bytes</dt>
+<dd>
+<p>Maximum receive and send buffer sizes (in bytes) of sockets.</p>
+
+<p>These correspond to the SO_RCVBUF and SO_SNDBUF settings which can be set
+via the setsockopt(2) syscall.  Some kernels (e.g. Linux 2.4+) have
+intelligent auto-tuning mechanisms and there is no need (and it is
+sometimes detrimental) to specify them.</p>
+
+<p>See the socket API documentation of your operating system to determine the
+exact semantics of these settings and other operating system-specific knobs
+where they can be specified.</p>
+
+<p>Defaults: operating system defaults</p>
+</dd><dt>:tcp_nodelay =&gt; true or false</dt>
+<dd>
+<p>Disables Nagle’s algorithm on TCP sockets if <tt>true</tt>.</p>
+
+<p>Setting this to <tt>true</tt> can make streaming responses in Rails 3.1
+appear more quickly at the cost of slightly higher bandwidth usage. The
+effect of this option is most visible if nginx is not used, but nginx
+remains highly recommended with Unicorn.</p>
+
+<p>This has no effect on UNIX sockets.</p>
+
+<p>Default: <tt>true</tt> (Nagle’s algorithm disabled) in Unicorn,
+<tt>true</tt> in Rainbows!  This defaulted to <tt>false</tt> in Unicorn 3.x</p>
+</dd><dt>:tcp_nopush =&gt; true or false</dt>
+<dd>
+<p>Enables/disables TCP_CORK in Linux or TCP_NOPUSH in FreeBSD</p>
+
+<p>This prevents partial TCP frames from being sent out and reduces wakeups in
+nginx if it is on a different machine.  Since Unicorn is only designed for
+applications that send the response body quickly without keepalive, sockets
+will always be flushed on close to prevent delays.</p>
+
+<p>This has no effect on UNIX sockets.</p>
+
+<p>Default: <tt>false</tt> This defaulted to <tt>true</tt> in Unicorn 3.4 -
+3.7</p>
+</dd><dt>:ipv6only =&gt; true or false</dt>
+<dd>
+<p>This option makes IPv6-capable TCP listeners IPv6-only and unable to
+receive IPv4 queries on dual-stack systems.  A separate IPv4-only listener
+is required if this is true.</p>
+
+<p>This option is only available for Ruby 1.9.2 and later.</p>
+
+<p>Enabling this option for the IPv6-only listener and having a separate IPv4
+listener is recommended if you wish to support IPv6 on the same TCP port. 
+Otherwise, the value of env["REMOTE_ADDR"] will appear as an ugly
+IPv4-mapped-IPv6 address for IPv4 clients (e.g “:ffff:10.0.0.1” instead of
+just “10.0.0.1”).</p>
+
+<p>Default: Operating-system dependent</p>
+</dd><dt>:reuseport =&gt; true or false</dt>
+<dd>
+<p>This enables multiple, independently-started unicorn instances to bind to
+the same port (as long as all the processes enable this).</p>
+
+<p>This option must be used when unicorn first binds the listen socket. It
+cannot be enabled when a socket is inherited via SIGUSR2 (but it will
+remain on if inherited), and it cannot be enabled directly via SIGHUP.</p>
+
+<p>Note: there is a chance of connections being dropped if one of the unicorn
+instances is stopped while using this.</p>
+
+<p>This is supported on *BSD systems and Linux 3.9 or later.</p>
+
+<p>ref: <a
+href="https://lwn.net/Articles/542629/">lwn.net/Articles/542629/</a></p>
+
+<p>Default: false (unset)</p>
+</dd><dt>:tries =&gt; Integer</dt>
+<dd>
+<p>Times to retry binding a socket if it is already in use</p>
+
+<p>A negative number indicates we will retry indefinitely, this is useful for
+migrations and upgrades when individual workers are binding to different
+ports.</p>
+
+<p>Default: 5</p>
+</dd><dt>:delay =&gt; seconds</dt>
+<dd>
+<p>Seconds to wait between successive <tt>tries</tt></p>
+
+<p>Default: 0.5 seconds</p>
+</dd><dt>:umask =&gt; mode</dt>
+<dd>
+<p>Sets the file mode creation mask for UNIX sockets.  If specified, this is
+usually in octal notation.</p>
+
+<p>Typically UNIX domain sockets are created with more liberal file
+permissions than the rest of the application.  By default, we create UNIX
+domain sockets to be readable and writable by all local users to give them
+the same accessibility as locally-bound TCP listeners.</p>
+
+<p>This has no effect on TCP listeners.</p>
+
+<p>Default: 0000 (world-read/writable)</p>
+</dd><dt>:tcp_defer_accept =&gt; Integer</dt>
+<dd>
+<p>Defer accept() until data is ready (Linux-only)</p>
+
+<p>For Linux 2.6.32 and later, this is the number of retransmits to defer an
+accept() for if no data arrives, but the client will eventually be accepted
+after the specified number of retransmits regardless of whether data is
+ready.</p>
+
+<p>For Linux before 2.6.32, this is a boolean option, and accepts are
+<em>always</em> deferred indefinitely if no data arrives. This is similar
+to <tt>:accept_filter =&gt; &quot;dataready&quot;</tt> under FreeBSD.</p>
+
+<p>Specifying <tt>true</tt> is synonymous for the default value(s) below, and
+<tt>false</tt> or <tt>nil</tt> is synonymous for a value of zero.</p>
+
+<p>A value of <tt>1</tt> is a good optimization for local networks and trusted
+clients.  For Rainbows! and Zbatery users, a higher value (e.g.
+<tt>60</tt>) provides more protection against some denial-of-service
+attacks.  There is no good reason to ever disable this with a <tt>zero</tt>
+value when serving HTTP.</p>
+
+<p>Default: 1 retransmit for Unicorn, 60 for Rainbows! 0.95.0+</p>
+</dd><dt>:accept_filter =&gt; String</dt>
+<dd>
+<p>defer accept() until data is ready (FreeBSD-only)</p>
+
+<p>This enables either the “dataready” or (default) “httpready” accept()
+filter under FreeBSD.  This is intended as an optimization to reduce
+context switches with common GET/HEAD requests.  For Rainbows! and Zbatery
+users, this provides some protection against certain denial-of-service
+attacks, too.</p>
+
+<p>There is no good reason to change from the default.</p>
+
+<p>Default: “httpready”</p>
+</dd></dl>
+            
+
+            
+            <div class="method-source-code" id="listen-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 409</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">listen</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">address</span> = <span class="ruby-identifier">expand_addr</span>(<span class="ruby-identifier">address</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">address</span>
+    [ <span class="ruby-value">:umask</span>, <span class="ruby-value">:backlog</span>, <span class="ruby-value">:sndbuf</span>, <span class="ruby-value">:rcvbuf</span>, <span class="ruby-value">:tries</span> ].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">value</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">key</span>] <span class="ruby-keyword">or</span> <span class="ruby-keyword">next</span>
+      <span class="ruby-constant">Integer</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">or</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;not an integer: #{key}=#{value.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    [ <span class="ruby-value">:tcp_nodelay</span>, <span class="ruby-value">:tcp_nopush</span>, <span class="ruby-value">:ipv6only</span>, <span class="ruby-value">:reuseport</span> ].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+      (<span class="ruby-identifier">value</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">key</span>]).<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">next</span>
+      <span class="ruby-constant">TrueClass</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">||</span> <span class="ruby-constant">FalseClass</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">or</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;not boolean: #{key}=#{value.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">value</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:delay</span>]).<span class="ruby-identifier">nil?</span>
+      <span class="ruby-constant">Numeric</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">or</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;not numeric: delay=#{value.inspect}&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">set</span>[<span class="ruby-value">:listener_opts</span>][<span class="ruby-identifier">address</span>].<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">set</span>[<span class="ruby-value">:listeners</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">address</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- listen-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- listen-method -->
+
+      
+        <div id="logger-method" class="method-detail ">
+          <a name="method-i-logger"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">logger</span><span
+              class="method-args">(obj)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets object to the <tt>obj</tt> Logger-like object.  The new Logger-like
+object must respond to the following methods:</p>
+<ul><li>
+<p>debug</p>
+</li><li>
+<p>info</p>
+</li><li>
+<p>warn</p>
+</li><li>
+<p>error</p>
+</li><li>
+<p>fatal</p>
+</li></ul>
+
+<p>The default Logger will log its output to the path specified by
+<tt>stderr_path</tt>.  If you’re running <a
+href="../Unicorn.html">Unicorn</a> daemonized, then you must specify a path
+to prevent error messages from going to /dev/null.</p>
+            
+
+            
+            <div class="method-source-code" id="logger-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 129</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logger</span>(<span class="ruby-identifier">obj</span>)
+  <span class="ruby-node">%(debug info warn error fatal)</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">m</span>) <span class="ruby-keyword">and</span> <span class="ruby-keyword">next</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;logger=#{obj} does not respond to method=#{m}&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">set</span>[<span class="ruby-value">:logger</span>] = <span class="ruby-identifier">obj</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- logger-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- logger-method -->
+
+      
+        <div id="pid-method" class="method-detail ">
+          <a name="method-i-pid"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">pid</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets the <tt>path</tt> for the PID file of the unicorn master process</p>
+            
+
+            
+            <div class="method-source-code" id="pid-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 433</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">pid</span>(<span class="ruby-identifier">path</span>); <span class="ruby-identifier">set_path</span>(<span class="ruby-value">:pid</span>, <span class="ruby-identifier">path</span>); <span class="ruby-keyword">end</span></pre>
+            </div><!-- pid-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- pid-method -->
+
+      
+        <div id="preload_app-method" class="method-detail ">
+          <a name="method-i-preload_app"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">preload_app</span><span
+              class="method-args">(bool)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Enabling this preloads an application before forking worker processes. 
+This allows memory savings when using a copy-on-write-friendly GC but can
+cause bad things to happen when resources like sockets are opened at load
+time by the master process and shared by multiple children.  People
+enabling this are highly encouraged to look at the before_fork/after_fork
+hooks to properly close/reopen sockets.  Files opened for logging do not
+have to be reopened as (unbuffered-in-userspace) files opened with the
+File::APPEND flag are written to atomically on UNIX.</p>
+
+<p>In addition to reloading the unicorn-specific config settings, SIGHUP will
+reload application code in the working directory/symlink when workers are
+gracefully restarted when <a
+href="Configurator.html#method-i-preload_app">preload_app</a>=false (the
+default).  As reloading the application sometimes requires RubyGems
+updates, <tt>Gem.refresh</tt> is always called before the application is
+loaded (for RubyGems users).</p>
+
+<p>During deployments, care should <em>always</em> be taken to ensure your
+applications are properly deployed and running.  Using <a
+href="Configurator.html#method-i-preload_app">preload_app</a>=false (the
+default) means you <em>must</em> check if your application is responding
+properly after a deployment. Improperly deployed applications can go into a
+spawn loop if the application fails to load.  While your children are in a
+spawn loop, it is is possible to fix an application by properly deploying
+all required code and dependencies. Using <a
+href="Configurator.html#method-i-preload_app">preload_app</a>=true means
+any application load error will cause the master process to exit with an
+error.</p>
+            
+
+            
+            <div class="method-source-code" id="preload_app-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 463</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">preload_app</span>(<span class="ruby-identifier">bool</span>)
+  <span class="ruby-identifier">set_bool</span>(<span class="ruby-value">:preload_app</span>, <span class="ruby-identifier">bool</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- preload_app-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- preload_app-method -->
+
+      
+        <div id="rewindable_input-method" class="method-detail ">
+          <a name="method-i-rewindable_input"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">rewindable_input</span><span
+              class="method-args">(bool)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Toggles making env["rack.input"] rewindable. Disabling rewindability can
+improve performance by lowering I/O and memory usage for applications that
+accept uploads. Keep in mind that the Rack 1.x spec requires
+env["rack.input"] to be rewindable, so this allows intentionally violating
+the current Rack 1.x spec.</p>
+
+<p><tt>rewindable_input</tt> defaults to <tt>true</tt> when used with Rack 1.x
+for Rack conformance.  When Rack 2.x is finalized, this will most likely
+default to <tt>false</tt> while still conforming to the newer (less
+demanding) spec.</p>
+            
+
+            
+            <div class="method-source-code" id="rewindable_input-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 478</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rewindable_input</span>(<span class="ruby-identifier">bool</span>)
+  <span class="ruby-identifier">set_bool</span>(<span class="ruby-value">:rewindable_input</span>, <span class="ruby-identifier">bool</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- rewindable_input-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- rewindable_input-method -->
+
+      
+        <div id="stderr_path-method" class="method-detail ">
+          <a name="method-i-stderr_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stderr_path</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Allow redirecting $stderr to a given path.  Unlike doing this from the
+shell, this allows the unicorn process to know the path its writing to and
+rotate the file if it is used for logging.  The file will be opened with
+the File::APPEND flag and writes synchronized to the kernel (but not
+necessarily to <em>disk</em>) so multiple processes can safely append to
+it.</p>
+
+<p>If you are daemonizing and using the default <tt>logger</tt>, it is
+important to specify this as errors will otherwise be lost to /dev/null.
+Some applications/libraries may also triggering warnings that go to stderr,
+and they will end up here.</p>
+            
+
+            
+            <div class="method-source-code" id="stderr_path-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 516</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stderr_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">set_path</span>(<span class="ruby-value">:stderr_path</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stderr_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stderr_path-method -->
+
+      
+        <div id="stdout_path-method" class="method-detail ">
+          <a name="method-i-stdout_path"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">stdout_path</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Same as <a href="Configurator.html#method-i-stderr_path">stderr_path</a>,
+except for $stdout.  Not many Rack applications write to $stdout, but any
+that do will have their output written here. It is safe to point this to
+the same location a stderr_path. Like <a
+href="Configurator.html#method-i-stderr_path">stderr_path</a>, this
+defaults to /dev/null when daemonized.</p>
+            
+
+            
+            <div class="method-source-code" id="stdout_path-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 524</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">stdout_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-identifier">set_path</span>(<span class="ruby-value">:stdout_path</span>, <span class="ruby-identifier">path</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- stdout_path-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- stdout_path-method -->
+
+      
+        <div id="timeout-method" class="method-detail ">
+          <a name="method-i-timeout"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">timeout</span><span
+              class="method-args">(seconds)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets the timeout of worker processes to <tt>seconds</tt>.  Workers handling
+the request/app.call/response cycle taking longer than this time period
+will be forcibly killed (via SIGKILL).  This timeout is enforced by the
+master process itself and not subject to the scheduling limitations by the
+worker process.  Due the low-complexity, low-overhead implementation,
+timeouts of less than 3.0 seconds can be considered inaccurate and unsafe.</p>
+
+<p>For running <a href="../Unicorn.html">Unicorn</a> behind nginx, it is
+recommended to set “fail_timeout=0” for in your nginx configuration like
+this to have nginx always retry backends that may have had workers
+SIGKILL-ed due to timeouts.</p>
+
+<pre># See http://wiki.nginx.org/NginxHttpUpstreamModule for more details
+# on nginx upstream configuration:
+upstream unicorn_backend {
+  # for UNIX domain socket setups:
+  server unix:/path/to/.unicorn.sock fail_timeout=0;
+
+  # for TCP setups
+  server 192.168.0.7:8080 fail_timeout=0;
+  server 192.168.0.8:8080 fail_timeout=0;
+  server 192.168.0.9:8080 fail_timeout=0;
+}</pre>
+            
+
+            
+            <div class="method-source-code" id="timeout-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">timeout</span>(<span class="ruby-identifier">seconds</span>)
+  <span class="ruby-identifier">set_int</span>(<span class="ruby-value">:timeout</span>, <span class="ruby-identifier">seconds</span>, <span class="ruby-value">3</span>)
+  <span class="ruby-comment"># POSIX says 31 days is the smallest allowed maximum timeout for select()</span>
+  <span class="ruby-identifier">max</span> = <span class="ruby-value">30</span> * <span class="ruby-value">60</span> * <span class="ruby-value">60</span> * <span class="ruby-value">24</span>
+  <span class="ruby-identifier">set</span>[<span class="ruby-value">:timeout</span>] = <span class="ruby-identifier">seconds</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">seconds</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- timeout-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- timeout-method -->
+
+      
+        <div id="user-method" class="method-detail ">
+          <a name="method-i-user"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">user</span><span
+              class="method-args">(user, group = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Runs worker processes as the specified <tt>user</tt> and <tt>group</tt>.
+The master process always stays running as the user who started it. This
+switch will occur after calling the <a
+href="Configurator.html#method-i-after_fork">after_fork</a> hook, and only
+if the <a href="Worker.html#method-i-user">Worker#user</a> method is not
+called in the <a
+href="Configurator.html#method-i-after_fork">after_fork</a> hook
+<tt>group</tt> is optional and will not change if unspecified.</p>
+            
+
+            
+            <div class="method-source-code" id="user-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 553</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user</span>(<span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-comment"># raises ArgumentError on invalid user/group</span>
+  <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getpwnam</span>(<span class="ruby-identifier">user</span>)
+  <span class="ruby-constant">Etc</span>.<span class="ruby-identifier">getgrnam</span>(<span class="ruby-identifier">group</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">group</span>
+  <span class="ruby-identifier">set</span>[<span class="ruby-value">:user</span>] = [ <span class="ruby-identifier">user</span>, <span class="ruby-identifier">group</span> ]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- user-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- user-method -->
+
+      
+        <div id="worker_processes-method" class="method-detail ">
+          <a name="method-i-worker_processes"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">worker_processes</span><span
+              class="method-args">(nr)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets the current number of <a
+href="Configurator.html#method-i-worker_processes">worker_processes</a> to
+<tt>nr</tt>.  Each worker process will serve exactly one client at a time. 
+You can increment or decrement this value at runtime by sending SIGTTIN or
+SIGTTOU respectively to the master process without reloading the rest of
+your <a href="../Unicorn.html">Unicorn</a> configuration.  See the <a
+href="../SIGNALS.html">SIGNALS</a> document for more information.</p>
+            
+
+            
+            <div class="method-source-code" id="worker_processes-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 210</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">worker_processes</span>(<span class="ruby-identifier">nr</span>)
+  <span class="ruby-identifier">set_int</span>(<span class="ruby-value">:worker_processes</span>, <span class="ruby-identifier">nr</span>, <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- worker_processes-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- worker_processes-method -->
+
+      
+        <div id="working_directory-method" class="method-detail ">
+          <a name="method-i-working_directory"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">working_directory</span><span
+              class="method-args">(path)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>sets the working directory for <a href="../Unicorn.html">Unicorn</a>.  This
+ensures SIGUSR2 will start a new instance of <a
+href="../Unicorn.html">Unicorn</a> in this directory.  This may be a
+symlink, a common scenario for Capistrano users.  Unlike all other <a
+href="../Unicorn.html">Unicorn</a> configuration directives, this binds
+immediately for error checking and cannot be undone by unsetting it in the
+configuration file and reloading.</p>
+            
+
+            
+            <div class="method-source-code" id="working_directory-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/configurator.rb, line 534</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">working_directory</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-comment"># just let chdir raise errors</span>
+  <span class="ruby-identifier">path</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">config_file</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-identifier">config_file</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">//</span> <span class="ruby-operator">&amp;&amp;</span>
+     <span class="ruby-operator">!</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">readable?</span>(<span class="ruby-node">&quot;#{path}/#{config_file}&quot;</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>,
+          <span class="ruby-node">&quot;config_file=#{config_file} would not be accessible in&quot;</span>              <span class="ruby-node">&quot; working_directory=#{path}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">path</span>)
+  <span class="ruby-constant">Unicorn</span><span class="ruby-operator">::</span><span class="ruby-constant">HttpServer</span><span class="ruby-operator">::</span><span class="ruby-constant">START_CTX</span>[<span class="ruby-value">:cwd</span>] = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;PWD&quot;</span>] = <span class="ruby-identifier">path</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- working_directory-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- working_directory-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

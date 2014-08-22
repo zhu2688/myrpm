@@ -1,0 +1,14 @@
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+[2014-8-22] MYRPM for Linux 0.0.1 beta
+This version of MYRPM includes:
+    - pcre 8.32
+    - Nginx-1.6.1
+    - MySQL 5.5.39
+    - OpenSSL 1.0.0m
+    - redis 2.8.13
+    - yaml 0.1.5
+    
+    - zlib 1.2.8 
+    - ruby 1.9.3
+    - rubygems 2.4.1
+    - unicorn

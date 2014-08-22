@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: README [raindrops-0.13.0 Documentation]</title>
+
+  <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+  <script src="./js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file">
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="./Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="./Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="./Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="./Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="./Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="./Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="./Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="./Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="./Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="./Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="./Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="./Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="./Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    
+<h1>raindrops - real-time stats for preforking Rack servers</h1>
+
+<p><a href="Raindrops.html">Raindrops</a> is a real-time stats toolkit to show
+statistics for Rack HTTP servers.  It is designed for preforking servers
+such as Rainbows! and Unicorn, but should support any Rack HTTP server
+under Ruby 2.0, 1.9, 1.8 and Rubinius on platforms supporting POSIX shared
+memory.  It may also be used as a generic scoreboard for sharing atomic
+counters across multiple processes.</p>
+
+<h2>Features</h2>
+<ul><li>
+<p>counters are shared across all forked children and lock-free</p>
+</li><li>
+<p>counters are kept on separate cache lines to reduce contention under SMP</p>
+</li><li>
+<p>may expose server statistics as a Rack Middleware endpoint (default:
+“/_raindrops”)</p>
+</li><li>
+<p>middleware displays the number of actively processing and writing clients
+from a single request regardless of which worker process it hits.</p>
+</li></ul>
+
+<h2>Linux-only Extra Features!</h2>
+<ul><li>
+<p>Middleware response includes extra stats for bound TCP and Unix domain
+sockets (configurable, it can include stats from other TCP or UNIX domain
+socket servers).</p>
+</li><li>
+<p>TCP socket stats use efficient inet_diag facilities via netlink instead of
+parsing /proc/net/tcp to minimize overhead. This was fun to discover and
+write.</p>
+</li><li>
+<p>TCP_Info reporting may be used to check stat for every accepted client on
+TCP servers</p>
+</li></ul>
+
+<p>Users of older Linux kernels need to ensure that the the “inet_diag” and
+“tcp_diag” kernel modules are loaded as they do not autoload correctly</p>
+
+<h2>Install</h2>
+
+<p>We recommend GCC 4+ (or compatible) to support the <a
+href="http://gcc.gnu.org/onlinedocs/gcc/Atomic-Builtins.html">atomic
+builtins</a> (<em>_sync</em><a
+href="http://www.hpl.hp.com/research/linux/atomic_ops/">add,sub}_and_fetch()).
+For non-GCC 4+ users, we also support compilation with the
+{libatomic_ops</a> package starting with <a
+href="Raindrops.html">Raindrops</a> 0.4.0.</p>
+
+<p>If you’re using a packaged Ruby distribution, make sure you have a C
+compiler and the matching Ruby development libraries and headers.</p>
+
+<p>If you use RubyGems:</p>
+
+<pre>gem install raindrops</pre>
+
+<p>Otherwise grab the latest tarball from:</p>
+
+<p><a
+href="http://raindrops.bogomips.org/files/">raindrops.bogomips.org/files/</a></p>
+
+<p>Unpack it, and run “ruby setup.rb”</p>
+
+<h2>Usage</h2>
+
+<p>See <a href="Raindrops/Middleware.html">Raindrops::Middleware</a> and <a
+href="Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a>
+documentation for use Rack servers.  The entire library is fully-documented
+and we are responsive on the mailing list (<a
+href="mailto:raindrops@librelist.org">raindrops@librelist.org</a>) if you
+have any questions or comments.</p>
+
+<h2>Development</h2>
+
+<p>You can get the latest source via git from the following locations:</p>
+
+<pre>git://bogomips.org/raindrops.git
+git://repo.or.cz/raindrops.git (mirror)</pre>
+
+<p>You may browse the code from the web and download the latest snapshot
+tarballs here:</p>
+<ul><li>
+<p><a href="http://bogomips.org/raindrops.git">bogomips.org/raindrops.git</a>
+(cgit)</p>
+</li><li>
+<p><a href="http://repo.or.cz/w/raindrops.git">repo.or.cz/w/raindrops.git</a>
+(gitweb)</p>
+</li></ul>
+
+<p>Inline patches (from “git format-patch”) to the mailing list are preferred
+because they allow code review and comments in the reply to the patch.</p>
+
+<p>We will adhere to mostly the same conventions for patch submissions as git
+itself.  See the Documentation/SubmittingPatches document distributed with
+git on on patch submission guidelines to follow.  Just don’t email the git
+mailing list or maintainer with raindrops patches.</p>
+
+<p>raindrops is currently dual-licensed under the LGPLv2.1 and LGPLv3.  To
+allow for a transition to future versions of the LGPL, contributors are
+required to sign-off changes allowing allowing the project leader to
+relicense raindrops under newer versions of the LGPL (which should be
+similar in spirit to the existing LGPL).</p>
+
+<h2>Contact</h2>
+
+<p>All feedback (bug reports, user/development discussion, patches, pull
+requests) go to the mailing list: <a
+href="mailto:raindrops@librelist.org">raindrops@librelist.org</a></p>
+
+<p>The mailing list is mirrored to Gmane, all information about the group is
+here:</p>
+
+<p><a
+href="http://gmane.org/info.php?group=gmane.comp.lang.ruby.raindrops.general">gmane.org/info.php?group=gmane.comp.lang.ruby.raindrops.general</a></p>
+
+<p>Mailing list archives in mbox format may be downloaded here:</p>
+
+<p><a
+href="http://raindrops.bogomips.org/archives/">raindrops.bogomips.org/archives/</a></p>
+
+  </div>
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+</body>
+</html>
+

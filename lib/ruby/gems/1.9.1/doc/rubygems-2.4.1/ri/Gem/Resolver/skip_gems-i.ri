@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"skip_gems:EFI"Gem::Resolver#skip_gems;FI"RW;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HHash of gems to skip resolution.  Keyed by gem name, with arrays of;TI""gem specifications as values.;T:
+@file0FI"lib/rubygems/resolver.rb;T

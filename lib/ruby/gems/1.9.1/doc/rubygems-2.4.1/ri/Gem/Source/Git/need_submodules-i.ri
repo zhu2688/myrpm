@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"need_submodules:EFI"%Gem::Source::Git#need_submodules;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I":Does this repository need submodules checked out too?;T:
+@file0FI"lib/rubygems/source/git.rb;T

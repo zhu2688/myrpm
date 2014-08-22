@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Unicorn::Util</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/unicorn/util_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/unicorn/util.rb">lib/unicorn/util.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-reopen_logs">::reopen_logs</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Application_Timeouts.html">Application_Timeouts</a></li>
+        
+          <li class="file"><a href="../CONTRIBUTORS.html">CONTRIBUTORS</a></li>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../DESIGN.html">DESIGN</a></li>
+        
+          <li class="file"><a href="../FAQ.html">FAQ</a></li>
+        
+          <li class="file"><a href="../HACKING.html">HACKING</a></li>
+        
+          <li class="file"><a href="../ISSUES.html">ISSUES</a></li>
+        
+          <li class="file"><a href="../KNOWN_ISSUES.html">KNOWN_ISSUES</a></li>
+        
+          <li class="file"><a href="../LATEST.html">LATEST</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../Links.html">Links</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../PHILOSOPHY.html">PHILOSOPHY</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+          <li class="file"><a href="../SIGNALS.html">SIGNALS</a></li>
+        
+          <li class="file"><a href="../Sandbox.html">Sandbox</a></li>
+        
+          <li class="file"><a href="../TODO.html">TODO</a></li>
+        
+          <li class="file"><a href="../TUNING.html">TUNING</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Unicorn.html">Unicorn</a></li>
+        
+          <li><a href="../Unicorn/App.html">Unicorn::App</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails.html">Unicorn::App::OldRails</a></li>
+        
+          <li><a href="../Unicorn/App/OldRails/Static.html">Unicorn::App::OldRails::Static</a></li>
+        
+          <li><a href="../Unicorn/CGIWrapper.html">Unicorn::CGIWrapper</a></li>
+        
+          <li><a href="../Unicorn/ClientShutdown.html">Unicorn::ClientShutdown</a></li>
+        
+          <li><a href="../Unicorn/Configurator.html">Unicorn::Configurator</a></li>
+        
+          <li><a href="../Unicorn/HttpParser.html">Unicorn::HttpParser</a></li>
+        
+          <li><a href="../Unicorn/HttpServer.html">Unicorn::HttpServer</a></li>
+        
+          <li><a href="../Unicorn/OobGC.html">Unicorn::OobGC</a></li>
+        
+          <li><a href="../Unicorn/PrereadInput.html">Unicorn::PrereadInput</a></li>
+        
+          <li><a href="../Unicorn/SSLClient.html">Unicorn::SSLClient</a></li>
+        
+          <li><a href="../Unicorn/SSLConfigurator.html">Unicorn::SSLConfigurator</a></li>
+        
+          <li><a href="../Unicorn/StreamInput.html">Unicorn::StreamInput</a></li>
+        
+          <li><a href="../Unicorn/TeeInput.html">Unicorn::TeeInput</a></li>
+        
+          <li><a href="../Unicorn/TmpIO.html">Unicorn::TmpIO</a></li>
+        
+          <li><a href="../Unicorn/Util.html">Unicorn::Util</a></li>
+        
+          <li><a href="../Unicorn/Worker.html">Unicorn::Worker</a></li>
+        
+          <li><a href="../ExecCgi/ExecCgi.html">ExecCgi::ExecCgi</a></li>
+        
+          <li><a href="../Inetd/Inetd.html">Inetd::Inetd</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Unicorn::Util</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="reopen_logs-method" class="method-detail ">
+          <a name="method-c-reopen_logs"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">reopen_logs</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This reopens ALL logfiles in the process that have been rotated using
+logrotate(8) (without copytruncate) or similar tools. A <tt>File</tt>
+object is considered for reopening if it is:</p>
+
+<pre>1) opened with the O_APPEND and O_WRONLY flags
+2) the current open file handle does not match its original open path
+3) unbuffered (as far as userspace buffering goes, not O_SYNC)</pre>
+
+<p>Returns the number of files reopened</p>
+
+<p>In <a href="../Unicorn.html">Unicorn</a> 3.5.x and earlier, files must be
+opened with an absolute path to be considered a log file.</p>
+            
+
+            
+            <div class="method-source-code" id="reopen_logs-source">
+<pre>
+<span class="ruby-comment"># File lib/unicorn/util.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">reopen_logs</span>
+  <span class="ruby-identifier">to_reopen</span> = []
+  <span class="ruby-identifier">nr</span> = <span class="ruby-value">0</span>
+  <span class="ruby-constant">ObjectSpace</span>.<span class="ruby-identifier">each_object</span>(<span class="ruby-constant">File</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">fp</span><span class="ruby-operator">|</span> <span class="ruby-identifier">is_log?</span>(<span class="ruby-identifier">fp</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">to_reopen</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fp</span> }
+
+  <span class="ruby-identifier">to_reopen</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fp</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">orig_st</span> = <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">stat</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">IOError</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EBADF</span> <span class="ruby-comment"># race</span>
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">b</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">stat</span>(<span class="ruby-identifier">fp</span>.<span class="ruby-identifier">path</span>)
+      <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">ino</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">ino</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">dev</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">dev</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOENT</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-comment"># stdin, stdout, stderr are special.  The following dance should</span>
+      <span class="ruby-comment"># guarantee there is no window where `fp' is unwritable in MRI</span>
+      <span class="ruby-comment"># (or any correct Ruby implementation).</span>
+      <span class="ruby-comment">#</span>
+      <span class="ruby-comment"># Fwiw, GVL has zero bearing here.  This is tricky because of</span>
+      <span class="ruby-comment"># the unavoidable existence of stdio FILE * pointers for</span>
+      <span class="ruby-comment"># std{in,out,err} in all programs which may use the standard C library</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">fileno</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">2</span>
+        <span class="ruby-comment"># We do not want to hit fclose(3)-&gt;dup(2) window for std{in,out,err}</span>
+        <span class="ruby-comment"># MRI will use freopen(3) here internally on std{in,out,err}</span>
+        <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">reopen</span>(<span class="ruby-identifier">fp</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;a&quot;</span>)
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># We should not need this workaround, Ruby can be fixed:</span>
+        <span class="ruby-comment">#    http://bugs.ruby-lang.org/issues/9036</span>
+        <span class="ruby-comment"># MRI will not call call fclose(3) or freopen(3) here</span>
+        <span class="ruby-comment"># since there's no associated std{in,out,err} FILE * pointer</span>
+        <span class="ruby-comment"># This should atomically use dup3(2) (or dup2(2)) syscall</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">fp</span>.<span class="ruby-identifier">path</span>, <span class="ruby-string">&quot;a&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">tmpfp</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">reopen</span>(<span class="ruby-identifier">tmpfp</span>) }
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">sync</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">flush</span> <span class="ruby-comment"># IO#sync=true may not implicitly flush</span>
+      <span class="ruby-identifier">new_st</span> = <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">stat</span>
+
+      <span class="ruby-comment"># this should only happen in the master:</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">uid</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">new_st</span>.<span class="ruby-identifier">uid</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">gid</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">new_st</span>.<span class="ruby-identifier">gid</span>
+        <span class="ruby-identifier">fp</span>.<span class="ruby-identifier">chown</span>(<span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">uid</span>, <span class="ruby-identifier">orig_st</span>.<span class="ruby-identifier">gid</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">nr</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">IOError</span>, <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EBADF</span>
+      <span class="ruby-comment"># not much we can do...</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">nr</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- reopen_logs-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- reopen_logs-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

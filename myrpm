@@ -1,0 +1,187 @@
+#!/bin/bash
+#
+X86=0
+PC_VERSION=0
+PS_COMMAND="ps"
+if [ -f /etc/redhat-release ];then
+	PC_VERSION=1
+	PS_COMMAND="ps ax"
+fi
+function testport() {
+	if netstat -an | egrep ":$1 .*LISTEN" > /dev/null
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
+function testrun() {
+	if test -f $1
+	then
+		pid=`cat $1`
+		if test -z "$pid"
+		then
+			rm $1
+			return 1
+		fi
+		if $PS_COMMAND 2>/dev/null | egrep "^ *$pid.*$2" >/dev/null
+		then
+			return 0
+		else
+		  rm $1
+			return 1
+		fi
+	else
+		return 1
+	fi
+}
+de="false"
+
+# we need root to run 
+if test "`id -u`" -ne 0
+then
+	echo "You need to start Myrpm as root!"
+	exit
+fi
+
+if test -z $LD_LIBRARY_PATH
+then
+	export LD_LIBRARY_PATH=/opt/myrpm/lib
+else
+	export LD_LIBRARY_PATH=/opt/myrpm/lib:$LD_LIBRARY_PATH
+fi
+
+version=`cat /opt/myrpm/lib/VERSION`
+
+case $1 in
+	"startmysql")
+		if testrun /opt/myrpm/var/mysql.pid mysqld
+		then
+			echo "Myrpm: Myrpm-MySQL is already running."
+		else
+			if testport 3306
+			then
+				echo "Myrpm: Another MySQL daemon is already running."
+			else
+				echo "Myrpm: Starting MySQL..."
+				export MYSQL_HISTFILE=/dev/null
+				/opt/myrpm/bin/mysql.server start > /dev/null
+				if test $? -ne 0
+				then
+					echo "Myrpm: Couldn't start MySQL!"
+				fi
+			fi
+		fi
+		;;
+  "startmrtg")
+    if testrun /opt/mylmp/var/run/mrtg.pid mrtg
+		then
+			echo "Mrtg is already running."
+		else
+			if test -f /usr/bin/perl
+			then
+				echo "already install perl"
+			else
+				echo "not install perl and link myrpm -perl"
+				ln -s /opt/myrpm/bin/perl /usr/bin/perl
+			fi
+ 				echo "Starting Mrtg..."
+				LANG=C /opt/myrpm/bin/mrtg /opt/myrpm/etc/mrtg.cfg --pid-file=/opt/myrpm/var/run/mrtg.pid --lock-file=/opt/myrpm/var/run/mrtg.lock > /dev/null
+				if test $? -ne 0
+				then
+					echo "Myrpm: Couldn't start Mrtg!"
+				fi
+		  fi
+		 ;;		
+	"startnginx")
+		if testrun /opt/myrpm/var/run/nginx.pid nginx
+		then
+			echo "Myrpm: Myrpm-nginx already running."
+		else
+			if testport 80
+			then
+				echo "Myrpm: Another web server daemon is already running."
+			else
+				echo "Myrpm: Starting nginx..."
+				/opt/myrpm/sbin/nginx -c /opt/myrpm/etc/nginx.conf
+			fi
+		fi
+		;;
+	"startunicorn")
+		if testrun /opt/myrpm/var/unicorn.pid unicorn
+		then
+			echo "Myrpm: Myrpm-unicorn already running."
+		else
+			echo "Myrpm: Starting unicorn..."
+			/opt/myrpm/bin/unicorn_rails -E production -D -c /opt/myrpm/htdocs/mfg/config/unicorn.rb
+		fi
+		;;
+	"startredis")
+		if testrun /opt/myrpm/var/run/redis.pid redis
+		then
+			echo "Myrpm: Myrpm-Redis is already running."
+		else
+			echo "Myrpm: Starting redis..."
+			/opt/myrpm/bin/redis-server /opt/myrpm/etc/redis.conf
+		fi
+		;;
+	"stopredis")
+		if test -f /opt/myrpm/var/run/redis.pid
+		then
+			echo "Myrpm: Stopping redis..."
+			/opt/myrpm/bin/redis-cli shutdown
+			test -f /opt/myrpm/var/run/redis.pid && /bin/rm /opt/myrpm/var/run/redis.pid
+		else
+			echo "Myrpm: Myrpm-redis is not running."
+		fi
+		;;
+	"stopmrtg")
+		if test -f /opt/myrpm/var/run/mrtg.pid
+		then
+			echo "Myrpm: Stopping Mrtg..."
+			killall -s 9 mrtg > /dev/null
+			test -f /opt/myrpm/var/run/mrtg.pid && /bin/rm /opt/myrpm/var/run/mrtg.pid
+		else
+			echo "Myrpm: Myrpm-Mrtg is not running."
+		fi
+    ;;	
+	"stopnginx")
+		if test -f /opt/myrpm/var/run/nginx.pid 
+		then
+			echo "Myrpm: Stopping Nginx..."
+			killall -s 9 nginx > /dev/null
+			test -f /opt/myrpm/var/run/nginx.pid && /bin/rm /opt/myrpm/var/run/nginx.pid
+			sleep 2
+		else
+			echo "Myrpm: Nginx is not running."
+		fi
+		;;
+	"stopmysql")
+		if test -f /opt/myrpm/var/run/mysql.pid
+		then
+			/opt/myrpm/bin/mysql.server stop > /dev/null 2>&1 &
+			echo "Myrpm: Stopping MySQL..."
+			sleep 2
+			test -f /opt/myrpm/var/run/mysql.pid && rm /opt/myrpm/var/run/mysql.pid
+		else
+			echo "Myrpm: Myrpm-MySQL is not running."
+		fi
+		;;		
+   "version")
+                echo "Version: Myrpm for Linux $version"
+                ;;
+
+	*)	
+			echo "Usage: $0 <action>"
+			echo ""
+			echo "	startnginx  Start only Nginx"
+			echo "	startmysql   Start only MySQL"
+			echo "	startredis  Start only redis"
+			echo ""
+			echo "	stopnginx   Stop only Nginx"
+			echo "	stopmysql    Stop only MySQL"
+			echo "	stopredis   Stop only redis"
+
+		;;
+esac

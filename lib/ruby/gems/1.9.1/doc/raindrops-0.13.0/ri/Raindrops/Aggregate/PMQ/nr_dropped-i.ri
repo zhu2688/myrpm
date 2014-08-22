@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"nr_dropped:EFI")Raindrops::Aggregate::PMQ#nr_dropped;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"Creturns the number of dropped messages sent to a POSIX message;TI"<queue if non-blocking operation was desired with :lossy;T:
+@file0FI"#lib/raindrops/aggregate/pmq.rb;T

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	path:EFI"/Gem::RequestSet::Lockfile::ParseError#path;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I""The location of the lock file;T:
+@file0FI")lib/rubygems/request_set/lockfile.rb;T

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Module: Raindrops::Linux</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/raindrops/linux_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops/linux.rb">lib/raindrops/linux.rb</a></li>
+          
+            <li><a href="../lib/raindrops/middleware_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops/middleware.rb">lib/raindrops/middleware.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-tcp_listener_stats">::tcp_listener_stats</a></li>
+          
+          <li><a href="#method-c-unix_listener_stats">::unix_listener_stats</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="../Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="../Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="../Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="../Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="../Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="../Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="../Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="../Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">Raindrops::Linux</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="PROC_NET_UNIX_ARGS">PROC_NET_UNIX_ARGS</a></dt>
+          
+          <dd class="description"><p>The standard proc path for active UNIX domain sockets, feel free to call
+String#replace on this if your /proc is mounted in a non-standard location
+for whatever reason</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="tcp_listener_stats-method" class="method-detail ">
+          <a name="method-c-tcp_listener_stats"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">Raindrops::Linux.tcp_listener_stats([addrs[, sock]]) => hash</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>If specified, <tt>addr</tt> may be a string or array of strings
+representing listen addresses to filter for. Returns a hash with given
+addresses as keys and <a href="ListenStats.html">ListenStats</a> objects as
+the values or a hash of all addresses.</p>
+
+<pre>addrs = %w(0.0.0.0:80 127.0.0.1:8080)</pre>
+
+<p>If <tt>addr</tt> is nil or not specified, all (IPv4) addresses are
+returned. If <tt>sock</tt> is specified, it should be a
+Raindrops::InetDiagSock object.</p>
+            
+
+            
+            <div class="method-source-code" id="tcp_listener_stats-source">
+<pre>
+static VALUE tcp_listener_stats(int argc, VALUE *argv, VALUE self)
+{
+        VALUE rv = rb_hash_new();
+        struct nogvl_args args;
+        VALUE addrs, sock;
+
+        rb_scan_args(argc, argv, &quot;02&quot;, &amp;addrs, &amp;sock);
+
+        /*
+         * allocating page_size instead of OP_LEN since we'll reuse the
+         * buffer for recvmsg() later, we already checked for
+         * OPLEN &lt;= page_size at initialization
+         */
+        args.iov[2].iov_len = OPLEN;
+        args.iov[2].iov_base = alloca(page_size);
+        args.table = NULL;
+        if (NIL_P(sock))
+                sock = rb_funcall(cIDSock, id_new, 0);
+        args.fd = my_fileno(sock);
+
+        switch (TYPE(addrs)) {
+        case T_STRING:
+                rb_hash_aset(rv, addrs, tcp_stats(&amp;args, addrs));
+                return rv;
+        case T_ARRAY: {
+                long i;
+                long len = RARRAY_LEN(addrs);
+                VALUE cur;
+
+                if (len == 1) {
+                        cur = rb_ary_entry(addrs, 0);
+
+                        rb_hash_aset(rv, cur, tcp_stats(&amp;args, cur));
+                        return rv;
+                }
+                for (i = 0; i &lt; len; i++) {
+                        union any_addr check;
+                        VALUE cur = rb_ary_entry(addrs, i);
+
+                        parse_addr(&amp;check, cur);
+                        rb_hash_aset(rv, cur, Qtrue);
+                }
+                /* fall through */
+        }
+        case T_NIL:
+                args.table = st_init_strtable();
+                gen_bytecode_all(&amp;args.iov[2]);
+                break;
+        default:
+                rb_raise(rb_eArgError,
+                         &quot;addr must be an array of strings, a string, or nil&quot;);
+        }
+
+        nl_errcheck(rb_thread_io_blocking_region(diag, &amp;args, args.fd));
+
+        st_foreach(args.table, NIL_P(addrs) ? st_to_hash : st_AND_hash, rv);
+        st_free_table(args.table);
+
+        /* let GC deal with corner cases */
+        if (argc &lt; 2) rb_io_close(sock);
+        return rv;
+}</pre>
+            </div><!-- tcp_listener_stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- tcp_listener_stats-method -->
+
+      
+        <div id="unix_listener_stats-method" class="method-detail ">
+          <a name="method-c-unix_listener_stats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">unix_listener_stats</span><span
+              class="method-args">(paths = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Get <a href="ListenStats.html">ListenStats</a> from an array of
+<tt>paths</tt></p>
+
+<p>Socket state mapping from integer =&gt; symbol, based on socket_state enum
+from include/linux/net.h in the Linux kernel:</p>
+
+<pre>typedef enum {
+        SS_FREE = 0,              /* not allocated                */
+        SS_UNCONNECTED,           /* unconnected to any socket    */
+        SS_CONNECTING,            /* in process of connecting     */
+        SS_CONNECTED,             /* connected to socket          */
+        SS_DISCONNECTING          /* in process of disconnecting  */
+} socket_state;</pre>
+<ul><li>
+<p>SS_CONNECTING maps to ListenStats#queued</p>
+</li><li>
+<p>SS_CONNECTED maps to ListenStats#active</p>
+</li></ul>
+
+<p>This method may be significantly slower than its <a
+href="Linux.html#method-c-tcp_listener_stats">tcp_listener_stats</a>
+counterpart due to the latter being able to use inet_diag via netlink. This
+parses /proc/net/unix as there is no other (known) way to expose Unix
+domain socket statistics over netlink.</p>
+            
+
+            
+            <div class="method-source-code" id="unix_listener_stats-source">
+<pre>
+<span class="ruby-comment"># File lib/raindrops/linux.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">unix_listener_stats</span>(<span class="ruby-identifier">paths</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">rv</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span>,<span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">freeze</span>] = <span class="ruby-constant">Raindrops</span><span class="ruby-operator">::</span><span class="ruby-constant">ListenStats</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>) }
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">paths</span>
+    <span class="ruby-identifier">paths</span> = [ <span class="ruby-string">'[^\n]+'</span> ]
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">paths</span> = <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">path</span> = <span class="ruby-identifier">path</span>.<span class="ruby-identifier">dup</span>
+      <span class="ruby-identifier">path</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">BINARY</span>) <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-constant">Encoding</span>)
+      <span class="ruby-keyword">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">symlink?</span>(<span class="ruby-identifier">path</span>)
+        <span class="ruby-identifier">link</span> = <span class="ruby-identifier">path</span>
+        <span class="ruby-identifier">path</span> = <span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">link</span>).<span class="ruby-identifier">realpath</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">link</span>] = <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">path</span>] <span class="ruby-comment"># vivify ListenerStats</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">path</span>] <span class="ruby-comment"># vivify ListenerStats</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">path</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">paths</span> = <span class="ruby-node">/^\w+: \d+ \d+ (\d+) \d+ (\d+)\s+\d+ (#{paths.join('|')})$/</span>
+
+  <span class="ruby-comment"># no point in pread since we can't stat for size on this file</span>
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(*<span class="ruby-constant">PROC_NET_UNIX_ARGS</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">paths</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">path</span> = <span class="ruby-identifier">s</span>[<span class="ruby-value">-1</span>]
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;00000000&quot;</span> <span class="ruby-comment"># client sockets</span>
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">2</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">queued</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-value">3</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">path</span>].<span class="ruby-identifier">active</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># listeners, vivify empty stats</span>
+      <span class="ruby-identifier">rv</span>[<span class="ruby-identifier">path</span>]
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">rv</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- unix_listener_stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- unix_listener_stats-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

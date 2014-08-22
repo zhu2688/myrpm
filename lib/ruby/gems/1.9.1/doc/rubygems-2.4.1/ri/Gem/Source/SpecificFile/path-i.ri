@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"	path:EFI"#Gem::Source::SpecificFile#path;FI"R;F:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"0The path to the gem for this specific file.;T:
+@file0FI")lib/rubygems/source/specific_file.rb;T

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Raindrops::Struct</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/raindrops/struct_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops/struct.rb">lib/raindrops/struct.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="../NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="../README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="../Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="../Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="../Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="../Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="../Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="../Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="../Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="../Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="../Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="../Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Raindrops::Struct</h1>
+
+    <div id="description" class="description">
+      
+<p>This is a wrapper around <a href="../Raindrops.html">Raindrops</a> objects
+much like the core Ruby Struct can be seen as a wrapper around the core
+Array class. It’s usage is similar to the core Struct class, except its
+fields may only be used to house unsigned long integers.</p>
+
+<pre>class Foo &lt; Raindrops::Struct.new(:readers, :writers)
+end
+
+foo = Foo.new 0, 0
+
+foo.incr_writers    -&gt; 1
+foo.incr_readers    -&gt; 1</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(*members)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>returns a new class derived from <a
+href="Struct.html">Raindrops::Struct</a> and supporting the given
+<tt>members</tt> as fields, just like Struct.new in core Ruby.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/raindrops/struct.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">members</span>)
+  <span class="ruby-identifier">members</span> = <span class="ruby-identifier">members</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span> }.<span class="ruby-identifier">freeze</span>
+  <span class="ruby-identifier">str</span> = <span class="ruby-string">def initialize(*values)  (MEMBERS.size &gt;= values.size) or raise ArgumentError, &quot;too many arguments&quot;  @raindrops = Raindrops.new(MEMBERS.size)  values.each_with_index { |val,i| @raindrops[i] = values[i] }enddef initialize_copy(src)  @raindrops = src.instance_variable_get(:@raindrops).dupenddef []=(index, value)  @raindrops[index] = valueenddef [](index)  @raindrops[index]enddef to_hash  ary = @raindrops.to_ary  rv = {}  MEMBERS.each_with_index { |member, i| rv[member] = ary[i] }  rvend</span>
+
+  <span class="ruby-identifier">members</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">member</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;def incr_#{member}; @raindrops.incr(#{i}); end; &quot;</span>               <span class="ruby-node">&quot;def decr_#{member}; @raindrops.decr(#{i}); end; &quot;</span>               <span class="ruby-node">&quot;def #{member}; @raindrops[#{i}]; end; &quot;</span>               <span class="ruby-node">&quot;def #{member}=(val); @raindrops[#{i}] = val; end; &quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-value">:MEMBERS</span>, <span class="ruby-identifier">members</span>)
+  <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">klass</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

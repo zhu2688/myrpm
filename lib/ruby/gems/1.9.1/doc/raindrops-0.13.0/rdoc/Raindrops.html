@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Raindrops</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/raindrops_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/raindrops.rb">lib/raindrops.rb</a></li>
+          
+            <li><a href="./ext/raindrops/raindrops_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="ext/raindrops/raindrops.c">ext/raindrops/raindrops.c</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">MODULE</span> <a href="Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+          
+          <li><span class="type">MODULE</span> <a href="Raindrops/Linux.html">Raindrops::Linux</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/Struct.html">Raindrops::Struct</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-5B-5D">#[]</a></li>
+          
+          <li><a href="#method-i-5B-5D-3D">#[]=</a></li>
+          
+          <li><a href="#method-i-capa">#capa</a></li>
+          
+          <li><a href="#method-i-decr">#decr</a></li>
+          
+          <li><a href="#method-i-evaporate-21">#evaporate!</a></li>
+          
+          <li><a href="#method-i-incr">#incr</a></li>
+          
+          <li><a href="#method-i-initialize_copy">#initialize_copy</a></li>
+          
+          <li><a href="#method-i-size">#size</a></li>
+          
+          <li><a href="#method-i-size-3D">#size=</a></li>
+          
+          <li><a href="#method-i-to_ary">#to_ary</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+        
+          <li class="file"><a href="./NEWS.html">NEWS</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Raindrops.html">Raindrops</a></li>
+        
+          <li><a href="./Raindrops/Aggregate.html">Raindrops::Aggregate</a></li>
+        
+          <li><a href="./Raindrops/Aggregate/LastDataRecv.html">Raindrops::Aggregate::LastDataRecv</a></li>
+        
+          <li><a href="./Raindrops/Aggregate/PMQ.html">Raindrops::Aggregate::PMQ</a></li>
+        
+          <li><a href="./Raindrops/InetDiagSocket.html">Raindrops::InetDiagSocket</a></li>
+        
+          <li><a href="./Raindrops/LastDataRecv.html">Raindrops::LastDataRecv</a></li>
+        
+          <li><a href="./Raindrops/Linux.html">Raindrops::Linux</a></li>
+        
+          <li><a href="./Raindrops/ListenStats.html">Raindrops::ListenStats</a></li>
+        
+          <li><a href="./Raindrops/Middleware.html">Raindrops::Middleware</a></li>
+        
+          <li><a href="./Raindrops/Middleware/Proxy.html">Raindrops::Middleware::Proxy</a></li>
+        
+          <li><a href="./Raindrops/Middleware/Stats.html">Raindrops::Middleware::Stats</a></li>
+        
+          <li><a href="./Raindrops/Struct.html">Raindrops::Struct</a></li>
+        
+          <li><a href="./Raindrops/TCP_Info.html">Raindrops::TCP_Info</a></li>
+        
+          <li><a href="./Raindrops/Watcher.html">Raindrops::Watcher</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Raindrops</h1>
+
+    <div id="description" class="description">
+      
+<p>Each <a href="Raindrops.html">Raindrops</a> object is a container that
+holds several counters. It is internally a page-aligned, shared memory area
+that allows atomic increments, decrements, assignments and reads without
+any locking.</p>
+
+<pre>rd = Raindrops.new 4
+rd.incr(0, 1)   -&gt; 1
+rd.to_ary       -&gt; [ 1, 0, 0, 0 ]</pre>
+
+<p>Unlike many classes in this package, the core <a
+href="Raindrops.html">Raindrops</a> class is intended to be portable to all
+reasonably modern *nix systems supporting mmap().  Please let us know if
+you have portability issues, patches or pull requests at <a
+href="mailto:raindrops@librelist.org">raindrops@librelist.org</a></p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">new(size)  &rarr; raindrops object</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Initializes a <a href="Raindrops.html">Raindrops</a> object to hold
+<tt>size</tt> counters.  <tt>size</tt> is only a hint and the actual number
+of counters the object has is dependent on the CPU model, number of cores,
+and page size of the machine.  The actual size of the object will always be
+equal or greater than the specified <tt>size</tt>.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+static VALUE init(VALUE self, VALUE size)
+{
+        struct raindrops *r = DATA_PTR(self);
+        int tries = 1;
+        size_t tmp;
+
+        if (r-&gt;drops != MAP_FAILED)
+                rb_raise(rb_eRuntimeError, &quot;already initialized&quot;);
+
+        r-&gt;size = NUM2SIZET(size);
+        if (r-&gt;size &lt; 1)
+                rb_raise(rb_eArgError, &quot;size must be &gt;= 1&quot;);
+
+        tmp = PAGE_ALIGN(raindrop_size * r-&gt;size);
+        r-&gt;capa = tmp / raindrop_size;
+        assert(PAGE_ALIGN(raindrop_size * r-&gt;capa) == tmp &amp;&amp; &quot;not aligned&quot;);
+
+retry:
+        r-&gt;drops = mmap(NULL, tmp,
+                        PROT_READ|PROT_WRITE, MAP_ANON|MAP_SHARED, -1, 0);
+        if (r-&gt;drops == MAP_FAILED) {
+                if ((errno == EAGAIN || errno == ENOMEM) &amp;&amp; tries-- &gt; 0) {
+                        rb_gc();
+                        goto retry;
+                }
+                rb_sys_fail(&quot;mmap&quot;);
+        }
+        r-&gt;pid = getpid();
+
+        return self;
+}</pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="5B-5D-method" class="method-detail ">
+          <a name="method-i-5B-5D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">rd[index]    &rarr; value</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns the value of the slot designated by <tt>index</tt></p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-source">
+<pre>
+static VALUE aref(VALUE self, VALUE index)
+{
+        return  ULONG2NUM(*addr_of(self, index));
+}</pre>
+            </div><!-- 5B-5D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-method -->
+
+      
+        <div id="5B-5D-3D-method" class="method-detail ">
+          <a name="method-i-5B-5D-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">rd[index] = value</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Assigns <tt>value</tt> to the slot designated by <tt>index</tt></p>
+            
+
+            
+            <div class="method-source-code" id="5B-5D-3D-source">
+<pre>
+static VALUE aset(VALUE self, VALUE index, VALUE value)
+{
+        unsigned long *addr = addr_of(self, index);
+
+        *addr = NUM2ULONG(value);
+
+        return value;
+}</pre>
+            </div><!-- 5B-5D-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 5B-5D-3D-method -->
+
+      
+        <div id="capa-method" class="method-detail ">
+          <a name="method-i-capa"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">capa              &rarr; Integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns the number of slots allocated (but not necessarily used) by the <a
+href="Raindrops.html">Raindrops</a> object.</p>
+            
+
+            
+            <div class="method-source-code" id="capa-source">
+<pre>
+static VALUE capa(VALUE self)
+{
+        return SIZET2NUM(get(self)-&gt;capa);
+}</pre>
+            </div><!-- capa-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- capa-method -->
+
+      
+        <div id="decr-method" class="method-detail ">
+          <a name="method-i-decr"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">decr(index[, number])     &rarr; result</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Decrements the value referred to by the <tt>index</tt> by <tt>number</tt>.
+<tt>number</tt> defaults to <tt>1</tt> if unspecified.</p>
+            
+
+            
+            <div class="method-source-code" id="decr-source">
+<pre>
+static VALUE decr(int argc, VALUE *argv, VALUE self)
+{
+        unsigned long nr = incr_decr_arg(argc, argv);
+
+        return ULONG2NUM(__sync_sub_and_fetch(addr_of(self, argv[0]), nr));
+}</pre>
+            </div><!-- decr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- decr-method -->
+
+      
+        <div id="evaporate-21-method" class="method-detail ">
+          <a name="method-i-evaporate-21"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">evaporate!        &rarr; nil</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Releases mmap()-ed memory allocated for the <a
+href="Raindrops.html">Raindrops</a> object back to the OS.  The Ruby
+garbage collector will also release memory automatically when it is not
+needed, but this forces release under high memory pressure.</p>
+            
+
+            
+            <div class="method-source-code" id="evaporate-21-source">
+<pre>
+static VALUE evaporate_bang(VALUE self)
+{
+        struct raindrops *r = get(self);
+        void *addr = r-&gt;drops;
+
+        r-&gt;drops = MAP_FAILED;
+        if (munmap(addr, raindrop_size * r-&gt;capa) != 0)
+                rb_sys_fail(&quot;munmap&quot;);
+        return Qnil;
+}</pre>
+            </div><!-- evaporate-21-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- evaporate-21-method -->
+
+      
+        <div id="incr-method" class="method-detail ">
+          <a name="method-i-incr"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">incr(index[, number])     &rarr; result</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Increments the value referred to by the <tt>index</tt> by <tt>number</tt>.
+<tt>number</tt> defaults to <tt>1</tt> if unspecified.</p>
+            
+
+            
+            <div class="method-source-code" id="incr-source">
+<pre>
+static VALUE incr(int argc, VALUE *argv, VALUE self)
+{
+        unsigned long nr = incr_decr_arg(argc, argv);
+
+        return ULONG2NUM(__sync_add_and_fetch(addr_of(self, argv[0]), nr));
+}</pre>
+            </div><!-- incr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- incr-method -->
+
+      
+        <div id="initialize_copy-method" class="method-detail ">
+          <a name="method-i-initialize_copy"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">dup               &rarr; rd_copy</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Duplicates and snapshots the current state of a <a
+href="Raindrops.html">Raindrops</a> object.</p>
+            
+
+            
+            <div class="method-source-code" id="initialize_copy-source">
+<pre>
+static VALUE init_copy(VALUE dest, VALUE source)
+{
+        struct raindrops *dst = DATA_PTR(dest);
+        struct raindrops *src = get(source);
+
+        init(dest, SIZET2NUM(src-&gt;size));
+        memcpy(dst-&gt;drops, src-&gt;drops, raindrop_size * src-&gt;size);
+
+        return dest;
+}</pre>
+            </div><!-- initialize_copy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initialize_copy-method -->
+
+      
+        <div id="size-method" class="method-detail ">
+          <a name="method-i-size"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size              &rarr; Integer</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Returns the number of counters a <a href="Raindrops.html">Raindrops</a>
+object can hold.  Due to page alignment, this is always equal or greater
+than the number of requested slots passed to <a
+href="Raindrops.html#method-c-new">Raindrops.new</a></p>
+            
+
+            
+            <div class="method-source-code" id="size-source">
+<pre>
+static VALUE size(VALUE self)
+{
+        return SIZET2NUM(get(self)-&gt;size);
+}</pre>
+            </div><!-- size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-method -->
+
+      
+        <div id="size-3D-method" class="method-detail ">
+          <a name="method-i-size-3D"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">size = new_size</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>Increases or decreases the current capacity of our Raindrop. Raises
+RangeError if <tt>new_size</tt> is too big or small for the current backing
+store</p>
+            
+
+            
+            <div class="method-source-code" id="size-3D-source">
+<pre>
+static VALUE setsize(VALUE self, VALUE new_size)
+{
+        size_t new_rd_size = NUM2SIZET(new_size);
+        struct raindrops *r = get(self);
+
+        if (new_rd_size &lt;= r-&gt;capa)
+                r-&gt;size = new_rd_size;
+        else
+                resize(r, new_rd_size);
+
+        return new_size;
+}</pre>
+            </div><!-- size-3D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- size-3D-method -->
+
+      
+        <div id="to_ary-method" class="method-detail ">
+          <a name="method-i-to_ary"></a>
+
+          
+          
+          <div class="method-heading">
+            <span class="method-callseq">to_ary    &rarr; Array</span>
+            
+            <span class="method-click-advice">click to toggle source</span>
+            
+          </div>
+          
+          
+
+          <div class="method-description">
+            
+            <p>converts the <a href="Raindrops.html">Raindrops</a> structure to an Array</p>
+            
+
+            
+            <div class="method-source-code" id="to_ary-source">
+<pre>
+static VALUE to_ary(VALUE self)
+{
+        struct raindrops *r = get(self);
+        VALUE rv = rb_ary_new2(r-&gt;size);
+        size_t i;
+        unsigned long base = (unsigned long)r-&gt;drops;
+
+        for (i = 0; i &lt; r-&gt;size; i++) {
+                rb_ary_push(rv, ULONG2NUM(*((unsigned long *)base)));
+                base += raindrop_size;
+        }
+
+        return rv;
+}</pre>
+            </div><!-- to_ary-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_ary-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
