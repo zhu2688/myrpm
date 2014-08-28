@@ -74,26 +74,6 @@ case $1 in
 			fi
 		fi
 		;;
-  "startmrtg")
-    if testrun /opt/mylmp/var/run/mrtg.pid mrtg
-		then
-			echo "Mrtg is already running."
-		else
-			if test -f /usr/bin/perl
-			then
-				echo "already install perl"
-			else
-				echo "not install perl and link myrpm -perl"
-				ln -s /opt/myrpm/bin/perl /usr/bin/perl
-			fi
- 				echo "Starting Mrtg..."
-				LANG=C /opt/myrpm/bin/mrtg /opt/myrpm/etc/mrtg.cfg --pid-file=/opt/myrpm/var/run/mrtg.pid --lock-file=/opt/myrpm/var/run/mrtg.lock > /dev/null
-				if test $? -ne 0
-				then
-					echo "Myrpm: Couldn't start Mrtg!"
-				fi
-		  fi
-		 ;;		
 	"startnginx")
 		if testrun /opt/myrpm/var/run/nginx.pid nginx
 		then
@@ -136,16 +116,6 @@ case $1 in
 			echo "Myrpm: Myrpm-redis is not running."
 		fi
 		;;
-	"stopmrtg")
-		if test -f /opt/myrpm/var/run/mrtg.pid
-		then
-			echo "Myrpm: Stopping Mrtg..."
-			killall -s 9 mrtg > /dev/null
-			test -f /opt/myrpm/var/run/mrtg.pid && /bin/rm /opt/myrpm/var/run/mrtg.pid
-		else
-			echo "Myrpm: Myrpm-Mrtg is not running."
-		fi
-    ;;	
 	"stopnginx")
 		if test -f /opt/myrpm/var/run/nginx.pid 
 		then
